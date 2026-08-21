@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bester-player.github.io/schema/kunde.schema.json",
+  "title": "Kunde",
+  "description": "Auftraggeber der Plattform Direct Handwork.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kunde_id", "typ", "strasse", "plz", "ort", "land", "erstkontakt_am", "newsletter"],
+  "properties": {
+    "kunde_id":       { "type": "string", "pattern": "^K-[0-9]{4}$" },
+    "typ":            { "enum": ["privat", "gewerblich"] },
+    "anrede":         { "type": ["string", "null"], "enum": ["Frau", "Herr", "Divers", null] },
+    "vorname":        { "type": ["string", "null"], "maxLength": 80 },
+    "nachname":       { "type": ["string", "null"], "maxLength": 80 },
+    "firma":          { "type": ["string", "null"], "maxLength": 120,
+                        "description": "Pflichtfeld für typ = gewerblich." },
+    "strasse":        { "type": "string", "maxLength": 120 },
+    "plz":            { "type": "string", "pattern": "^[0-9]{5}$" },
+    "ort":            { "type": "string", "maxLength": 80 },
+    "land":           { "type": "string", "pattern": "^[A-Z]{2}$" },
+    "telefon":        { "type": ["string", "null"] },
+    "email":          { "type": ["string", "null"], "format": "email" },
+    "erstkontakt_am": { "type": "string", "format": "date" },
+    "newsletter":     { "type": "boolean" },
+    "notiz":          { "type": ["string", "null"], "maxLength": 500 }
+  },
+  "allOf": [
+    {
+      "if":   { "properties": { "typ": { "const": "gewerblich" } } },
+      "then": { "properties": { "firma": { "type": "string", "minLength": 1 } } }
+    }
+  ]
+}

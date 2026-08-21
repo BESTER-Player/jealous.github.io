@@ -1,0 +1,14 @@
+{
+  "beschreibung": "Zulässige Status eines Auftrags inkl. erlaubter Folgestatus (Zustandsautomat).",
+  "stand": "2026-08-21",
+  "status": [
+    { "code": "neu",             "bezeichnung": "Neu eingegangen",       "reihenfolge": 10, "endstatus": false, "folgestatus": ["in_pruefung", "storniert"] },
+    { "code": "in_pruefung",     "bezeichnung": "In Prüfung",           "reihenfolge": 20, "endstatus": false, "folgestatus": ["angebot_erstellt", "storniert"] },
+    { "code": "angebot_erstellt","bezeichnung": "Angebot erstellt",      "reihenfolge": 30, "endstatus": false, "folgestatus": ["beauftragt", "storniert"] },
+    { "code": "beauftragt",      "bezeichnung": "Beauftragt",            "reihenfolge": 40, "endstatus": false, "folgestatus": ["in_arbeit", "storniert"] },
+    { "code": "in_arbeit",       "bezeichnung": "In Arbeit",             "reihenfolge": 50, "endstatus": false, "folgestatus": ["abgeschlossen", "storniert"] },
+    { "code": "abgeschlossen",   "bezeichnung": "Arbeit abgeschlossen",  "reihenfolge": 60, "endstatus": false, "folgestatus": ["abgerechnet"] },
+    { "code": "abgerechnet",     "bezeichnung": "Abgerechnet",           "reihenfolge": 70, "endstatus": true,  "folgestatus": [] },
+    { "code": "storniert",       "bezeichnung": "Storniert",             "reihenfolge": 99, "endstatus": true,  "folgestatus": [] }
+  ]
+}

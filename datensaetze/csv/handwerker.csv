@@ -1,0 +1,9 @@
+handwerker_id;betrieb;ansprechpartner;gewerke;strasse;plz;ort;telefon;email;ust_id;stundensatz_eur;einsatzradius_km;mitarbeiterzahl;notdienst;bewertung;aktiv;partner_seit
+H-201;Sanitär Lohmann GmbH;Kai Lohmann;sanitaer,heizung;Fössestraße 44;30451;Hannover;+49 511 4408810;dispo@sanitaer-lohmann.de;DE812445901;79.5;40;11;1;4.6;1;2024-03-01
+H-202;Elektro Steinmeyer e.K.;Petra Steinmeyer;elektro;Hildesheimer Straße 190;30519;Hannover;+49 511 8801245;info@elektro-steinmeyer.de;DE293007188;76.0;35;6;1;4.8;1;2023-11-15
+H-203;Malerbetrieb Ceylan;Emre Ceylan;maler,trockenbau;Davenstedter Straße 12;30453;Hannover;+49 511 2260099;kontakt@maler-ceylan.de;DE334019276;54.0;50;4;0;4.4;1;2024-06-10
+H-204;Fliesen Nowak GmbH;Grzegorz Nowak;fliesen;Im Heidkampe 5;30659;Hannover;+49 511 6104433;buero@fliesen-nowak.de;DE117762340;63.5;60;7;0;4.2;1;2025-01-20
+H-205;Tischlerei Ahrens & Sohn;Malte Ahrens;tischler;Zur Sägemühle 6;31303;Burgdorf;+49 5136 990120;werkstatt@tischlerei-ahrens.de;DE448120553;69.0;45;5;0;4.9;1;2023-05-02
+H-206;Dach & Fassade Rethmeier;Uwe Rethmeier;dachdecker;Feldstraße 77;31535;Neustadt am Rübenberge;+49 5032 445566;info@dach-rethmeier.de;DE560033891;72.5;70;9;1;4.1;1;2024-09-12
+H-207;Metallbau Grothe GmbH;Silke Grothe;schlosser;Gewerbering 14;30853;Langenhagen;+49 511 7331200;anfrage@metallbau-grothe.de;DE221904667;77.0;55;13;1;4.5;1;2025-02-03
+H-208;GaLaBau Timmermann;Jens Timmermann;garten;Am Sportplatz 1;30916;Isernhagen;+49 5139 220188;jens@galabau-timmermann.de;DE705118432;51.0;40;3;0;3.9;0;2024-04-22

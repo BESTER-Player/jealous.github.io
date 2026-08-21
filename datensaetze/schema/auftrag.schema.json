@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bester-player.github.io/schema/auftrag.schema.json",
+  "title": "Auftrag",
+  "description": "Ein Handwerksauftrag der Plattform Direct Handwork, von der Anfrage bis zur Abrechnung.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["auftrag_id", "kunde_id", "gewerk", "titel", "objekt", "kanal",
+               "prioritaet", "status", "eingegangen_am", "positionen"],
+  "properties": {
+    "auftrag_id":   { "type": "string", "pattern": "^A-[0-9]{4}-[0-9]{4}$",
+                      "description": "Format A-JJJJ-NNNN, laufende Nummer je Kalenderjahr." },
+    "kunde_id":     { "type": "string", "pattern": "^K-[0-9]{4}$" },
+    "handwerker_id": { "type": ["string", "null"], "pattern": "^H-[0-9]{3}$",
+                      "description": "Null, solange kein Betrieb zugeordnet ist." },
+    "gewerk":       { "enum": ["sanitaer", "heizung", "elektro", "maler", "fliesen",
+                               "tischler", "dachdecker", "trockenbau", "schlosser", "garten"] },
+    "titel":        { "type": "string", "minLength": 5, "maxLength": 120 },
+    "beschreibung": { "type": ["string", "null"], "maxLength": 2000 },
+
+    "objekt": {
+      "type": "object",
+      "description": "Einsatzort. Kann von der Rechnungsanschrift des Kunden abweichen.",
+      "additionalProperties": false,
+      "required": ["strasse", "plz", "ort"],
+      "properties": {
+        "strasse": { "type": "string", "maxLength": 120 },
+        "plz":     { "type": "string", "pattern": "^[0-9]{5}$" },
+        "ort":     { "type": "string", "maxLength": 80 },
+        "etage":   { "type": ["integer", "null"], "minimum": -3, "maximum": 40 },
+        "zugang":  { "type": ["string", "null"], "maxLength": 300 }
+      }
+    },
+
+    "kanal":      { "enum": ["web", "app", "telefon", "email", "empfehlung"] },
+    "prioritaet": { "enum": ["niedrig", "normal", "hoch", "notfall"] },
+    "status":     { "enum": ["neu", "in_pruefung", "angebot_erstellt", "beauftragt",
+                             "in_arbeit", "abgeschlossen", "abgerechnet", "storniert"] },
+
+    "eingegangen_am":       { "type": "string", "format": "date-time" },
+    "wunschtermin_von":     { "type": ["string", "null"], "format": "date" },
+    "wunschtermin_bis":     { "type": ["string", "null"], "format": "date" },
+    "termin_bestaetigt_am": { "type": ["string", "null"], "format": "date-time" },
+    "ausgefuehrt_am":       { "type": ["string", "null"], "format": "date" },
+    "abgerechnet_am":       { "type": ["string", "null"], "format": "date" },
+    "storniert_am":         { "type": ["string", "null"], "format": "date" },
+    "stornogrund":          { "enum": ["budget_ueberschritten", "kein_betrieb_verfuegbar",
+                                       "kunde_abgesprungen", "termin_nicht_haltbar",
+                                       "leistung_nicht_erbringbar", null] },
+
+    "budget_rahmen_eur":     { "type": ["number", "null"], "minimum": 0 },
+    "anfahrt_km":            { "type": ["number", "null"], "minimum": 0 },
+    "geschaetzte_dauer_h":   { "type": ["number", "null"], "minimum": 0 },
+    "tatsaechliche_dauer_h": { "type": ["number", "null"], "minimum": 0 },
+    "zahlungsart":           { "enum": ["rechnung", "lastschrift", "ec", "bar", null] },
+
+    "positionen": { "type": "array", "items": { "$ref": "position.schema.json" } },
+
+    "positionsanzahl":          { "type": "integer", "minimum": 0 },
+    "angebotssumme_netto_eur":  { "type": "number", "minimum": 0 },
+    "mwst_satz":                { "type": "number", "enum": [0.0, 0.07, 0.19] },
+    "mwst_betrag_eur":          { "type": "number", "minimum": 0 },
+    "angebotssumme_brutto_eur": { "type": "number", "minimum": 0 },
+    "notiz":                    { "type": ["string", "null"], "maxLength": 500 }
+  },
+
+  "allOf": [
+    {
+      "if":   { "properties": { "status": { "const": "storniert" } }, "required": ["status"] },
+      "then": { "required": ["storniert_am", "stornogrund"],
+                "properties": { "storniert_am": { "type": "string" } } }
+    },
+    {
+      "if":   { "properties": { "status": { "const": "abgerechnet" } }, "required": ["status"] },
+      "then": { "properties": { "ausgefuehrt_am": { "type": "string" },
+                                "abgerechnet_am": { "type": "string" } } }
+    },
+    {
+      "if":   { "properties": { "status": { "enum": ["beauftragt", "in_arbeit",
+                                                     "abgeschlossen", "abgerechnet"] } },
+                "required": ["status"] },
+      "then": { "properties": { "handwerker_id": { "type": "string" } } }
+    }
+  ]
+}
