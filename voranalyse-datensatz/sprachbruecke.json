@@ -1,0 +1,202 @@
+{
+  "_meta": {
+    "stand": "2026-08-22",
+    "status": "Teilbestand aus den in dieser Sitzung gesichteten Beitraegen",
+    "zweck": "Abbildung umgangssprachlicher Symptombeschreibungen auf technische Symptomklassen. Quelle sind alle gesichteten Beitraege, auch ungeloeste.",
+    "belegzahl_bedeutung": "Anzahl der Beitraege, in denen der Ausdruck gesichtet wurde. Das ist die Beleghaeufigkeit des WORTES und ausdruecklich keine Aussage ueber die Haeufigkeit der dahinterliegenden Ursache (Regel 4).",
+    "eintraege_gesamt": 17
+  },
+  "eintraege": [
+    {
+      "ausdruck": "geht auf Stoerung",
+      "varianten": [
+        "geht staendig aus",
+        "faellt aus",
+        "schaltet ab"
+      ],
+      "symptomklasse": "stoerabschaltung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 6,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "laeuft ohne Haube, mit Haube geht sie auf Stoerung",
+      "varianten": [
+        "nach Abnahme der Abdeckung lief sie problemlos"
+      ],
+      "symptomklasse": "stoerabschaltung_nur_bei_geschlossener_verkleidung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Sehr trennscharfes Leitsymptom - der Laie beschreibt hier unbewusst bereits den Diagnoseweg."
+    },
+    {
+      "ausdruck": "morgens Stoerung",
+      "varianten": [
+        "nach der Nachtabsenkung springt sie nie an"
+      ],
+      "symptomklasse": "stoerung_nach_stillstand",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "springt nicht an",
+      "varianten": [
+        "Brenner springt nicht mehr an",
+        "zuendet nicht"
+      ],
+      "symptomklasse": "kein_brennerstart",
+      "sinneskanal": "verhalten",
+      "belegzahl": 3,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "Warmwasser geht, Heizung nicht",
+      "varianten": [
+        "auf 'nur Wasser' laeuft sie einwandfrei",
+        "nur bei Heizung"
+      ],
+      "symptomklasse": "betriebsartabhaengige_stoerung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Zeigt auf den Lastpunkt, nicht auf den Warmwasserkreis."
+    },
+    {
+      "ausdruck": "laeuft 5 bis 10 Minuten, dann Stoerung",
+      "varianten": [
+        "laeuft ein paar Stunden und faellt dann aus"
+      ],
+      "symptomklasse": "flammverlust_im_betrieb",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "stoerabschaltung",
+        "betriebsartabhaengige_stoerung"
+      ],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "Heizkoerper bleiben lauwarm",
+      "varianten": [
+        "so gut wie kalt",
+        "Wohnung wird nicht warm"
+      ],
+      "symptomklasse": "zu_geringe_waermeabgabe",
+      "sinneskanal": "haptisch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "riecht nach Abgas",
+      "varianten": [
+        "es roch nach Abgas"
+      ],
+      "symptomklasse": "abgasgeruch",
+      "sinneskanal": "geruch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "tropft Kondensat aus dem Geraet",
+      "varianten": [],
+      "symptomklasse": "kondensataustritt",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "gluckert",
+      "varianten": [
+        "blubbert"
+      ],
+      "symptomklasse": "kondensatablauf_verstopft",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Aus einer Ratgeberquelle, nicht aus einem Nutzerbeitrag - schwaecherer Beleg."
+    },
+    {
+      "ausdruck": "klack beim Anlaufen",
+      "varianten": [],
+      "symptomklasse": "schaltgeraeusch_beim_start",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Im Beleg dem Gasstroemungswaechter zugeordnet. Das Fehlen des Geraeusches war dort das Auffaellige, nicht sein Vorhandensein."
+    },
+    {
+      "ausdruck": "Fehlermeldung mit durchgestrichenem Flammensymbol",
+      "varianten": [
+        "durchkreuztes Flammensymbol"
+      ],
+      "symptomklasse": "stoeranzeige_zuendung",
+      "sinneskanal": "optisch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Vaillant-spezifische Displayanzeige, oft zusammen mit F.28 oder F.29 genannt."
+    },
+    {
+      "ausdruck": "Reset hilft nur kurz",
+      "varianten": [
+        "muss staendig resettet werden",
+        "nach mehrfachem Quittieren laeuft sie ein paar Stunden"
+      ],
+      "symptomklasse": "stoerung_nur_temporaer_quittierbar",
+      "sinneskanal": "verhalten",
+      "belegzahl": 4,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "Dichtung war voellig im Eimer",
+      "varianten": [],
+      "symptomklasse": "bauteil_verschlissen",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": null
+    },
+    {
+      "ausdruck": "Ventil war verklebt",
+      "varianten": [],
+      "symptomklasse": "absperrorgan_festsitzend",
+      "sinneskanal": "haptisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Betreiberwiedergabe der Aussage des Netzbetreibers."
+    },
+    {
+      "ausdruck": "Fass ohne Boden",
+      "varianten": [
+        "Montagsgeraet",
+        "ich misstraue dem Geraet"
+      ],
+      "symptomklasse": "frustmarker_wiederholte_reparatur",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Kein technisches Symptom. Fuer die Voranalyse als Eskalationsmarker nutzbar: signalisiert Vorgeschichte mit erfolglosen Reparaturen."
+    },
+    {
+      "ausdruck": "A6 227",
+      "varianten": [
+        "6A227",
+        "6A-227",
+        "Fehler 6a 227"
+      ],
+      "symptomklasse": "codeeingabe_zifferndreher",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Der Betreiber gibt den Buderus-Code durchgaengig vertauscht an. Fuer die Eingabe-Normalisierung relevant: Code-Erkennung muss Zifferndreher und Schreibvarianten abfangen."
+    }
+  ]
+}
