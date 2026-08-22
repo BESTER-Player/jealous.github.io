@@ -3,14 +3,14 @@
 Datengrundlage für die KI-Voranalyse von Handwerks-Serviceanfragen.
 Gerätetyp: Gas-Brennwerttherme.
 
-**Stand 22.08.2026, dritter Durchlauf: 150 Fälle, 74 Codes, 38 Symptomklassen,
-40 Sprachbrücken-Einträge.**
+**Stand 22.08.2026, vierter Durchlauf: 269 Fälle, 100 Codes, 51 Symptomklassen,
+56 Sprachbrücken-Einträge.**
 
-Der Zielkorridor für die Fälle (120–250) ist erreicht, der für die
-Fehlercode-Einträge (200–500) nicht. Der Sammellauf brach nach 12 von 30
-Suchzellen ab, weil das WebSearch-Kontingent der Session erschöpft war –
-**Junkers/Bosch und Wolf haben deshalb weiterhin null Fälle** bei 26 erfassten
-Codes. Einzelheiten in `report.md`, Abschnitt 9.
+Der Zielkorridor für die Fälle (120–250) ist erreicht und überschritten, der für
+die Fehlercode-Einträge (200–500) nicht — vollständige Herstellertabellen wurden
+bewusst nicht übernommen (§87a ff. UrhG). **Alle fünf Hersteller sind jetzt
+belegt**, Junkers/Bosch mit 36 und Wolf mit 31 Fällen; beide standen vorher bei
+null. Einzelheiten in `report.md`, Abschnitt 10.
 
 Vorgeschichte: Durchlauf 1 sammelte 8 Fälle; Durchlauf 2 prüfte den Bestand
 (15 Agenten, 36 Befunde in `audit_befunde.md`, 10 umgesetzt).
@@ -22,9 +22,10 @@ Drei Punkte vor der Weiterverwendung:
   verwendbar.
 - Der Grad **`bestaetigt` ist ohne Seitenabruf nicht vergebbar**, weil die
   Lösungsbestätigung am Threadende steht und der Suchauszug davor abbricht.
-  **Alle 142 im dritten Durchlauf ergänzten Fälle tragen deshalb `vermutung`.**
-  Der Anteil belastbarer Fälle liegt bei 2 % (3 von 150) – in absoluten Zahlen
-  unverändert gegenüber dem Stand vor dem Sammellauf.
+  **Alle 261 in den Sammelläufen ergänzten Fälle tragen deshalb `vermutung`.**
+  Der Anteil belastbarer Fälle liegt bei 1,1 % (3 von 269) – in absoluten Zahlen
+  unverändert gegenüber dem Stand vor den Sammelläufen. Der Bestand taugt als
+  Landkarte des Problemraums, nicht als Ground Truth.
 - Der **Eval-Split ist weiterhin nicht gezogen** (siehe `split_log.md`); nach den
   Herabstufungen des zweiten Durchlaufs stehen noch 3 bestätigte Fälle.
 
@@ -42,6 +43,9 @@ schema/fall.schema.json     Feldsatz, exakt nach Auftrag
 scripts/validate.py         prüft Schema, harte Regeln und Querverweise
 scripts/split_eval.py       zieht den Eval-Split (Schritt 6)
 scripts/migration_2026-08-22.py  setzt die umgesetzten Auditbefunde um
+scripts/ingest_2026-08-22.py     nimmt die Fälle des ersten Sammellaufs auf
+scripts/ingest_lauf2.py          nimmt die Fälle des zweiten Sammellaufs auf
+scripts/bereinige_quellsprache.py  entfernt Quellen außerhalb der Auftragssprache
 ```
 
 ## Symptomklassen: die Achsentrennung

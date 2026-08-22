@@ -131,3 +131,49 @@ Unsicherheit vermerkt.
 | 1 Kandidat zur Ersatzteil-Kompatibilität (Drucksensor orange gegen schwarz) | Kein Leitsymptom, keine Störungsschilderung – für die Voranalyse wertlos |
 | 1 Codeangabe „F.62 und F.63" | Zwei Codes in einem Feld sind kein Code. Feld auf null, Aufzählung in `unsicherheiten` (Regel 1) |
 | Alle Angaben zu Manipulationen an Schutzeinrichtungen | Vorgabe des Sammelauftrags, wie im ersten Durchlauf |
+
+---
+
+## Nachtrag 22.08.2026: zweiter Sammellauf, alle 18 nachgeholten Zellen
+
+Das WebSearch-Kontingent war wieder verfügbar. Die 18 Zellen, die im ersten
+Sammellauf am erschöpften Budget gescheitert waren, wurden nachgeholt — nach
+Priorität geordnet (Junkers/Bosch und Wolf zuerst) und mit einem Deckel von
+8 Suchen je Zelle. **Verbraucht: 147 von 200 Suchen, alle 18 Zellen ausgeführt.**
+
+235 Kandidaten erhoben, 95 in einer adversarischen Offline-Gegenprüfung verworfen,
+9 Dubletten, 2 wegen Quellsprache entfernt — **121 aufgenommen**.
+
+Am TDM-Status ändert sich weiterhin nichts: für **alle** Domains ungeprüft, weil
+der Abruf von robots.txt am Egress-Proxy scheitert.
+
+### Alle Quellen des Bestands, nach Zahl der Fälle
+
+| Domain | Fälle | TDM-Status |
+|---|---:|---|
+| www.heizungsforum.de | 150 | ungeprüft |
+| community.viessmann.de | 62 | ungeprüft |
+| www.haustechnikdialog.de | 41 | ungeprüft |
+| www.diynot.com | 5 | ungeprüft |
+| community.screwfix.com | 3 | ungeprüft |
+| www.viessmann-community.com | 2 | ungeprüft |
+| www.elektroda.com | 1 | ungeprüft |
+| forums.moneysavingexpert.com | 1 | ungeprüft |
+| www.heizungfehlermeldung.de | 1 | ungeprüft |
+| www.fehlerhelfen.de | 1 | ungeprüft |
+| www.pleasantplumbers.com | 1 | ungeprüft |
+| www.dasheimwerkerforum.de | 1 | ungeprüft |
+
+### Ausgeschlossen im zweiten Sammellauf
+
+| Ausgeschlossen | Anzahl | Grund |
+|---|---:|---|
+| Kandidaten in der Gegenprüfung verworfen | 95 | Überdehnung über den Titelbeleg hinaus, kein individueller Fall (Codedatenbank/Ratgeber statt Betreiberthread), unbelegte Modellreihe |
+| Dubletten | 9 | Quell-URL bereits im Bestand |
+| Quellen außerhalb der Auftragssprache | 2 | `forum.info-ogrzewanie.pl`, `wentylacja.com.pl` — die Konfiguration nennt „primär Deutsch, Englisch nur ergänzend". Zusätzlich ist eine fremdsprachige Überschrift ohne Seitenabruf nicht auf Übersetzungsfehler prüfbar (Regel 8). Ausführung: `scripts/bereinige_quellsprache.py` |
+
+Die englischsprachigen Quellen (diynot.com, screwfix.com, moneysavingexpert.com,
+pleasantplumbers.com, elektroda.com) bleiben im Rahmen der Vorgabe „Englisch nur
+ergänzend". Ob ihre Baureihenbezeichnungen deckungsgleich mit dem deutschen Markt
+sind, ist **nicht geprüft** und in den betroffenen Fällen vermerkt.
+

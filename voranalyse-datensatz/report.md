@@ -507,3 +507,134 @@ werden"), Geräusche („es knallt, wenn der Brenner ausgeht") und Zeitbezüge
 4. **Die 142 neuen Fälle stichprobenartig gegen die Threads prüfen**, sobald
    Seitenabruf möglich ist. Erst dann lässt sich sagen, wie viele davon zu
    `bestaetigt` aufsteigen — und wie viele zu verwerfen sind.
+
+---
+
+# 10. Vierter Durchlauf: die nachgeholten 18 Suchzellen
+
+Stand 22.08.2026. Das WebSearch-Kontingent war wieder verfügbar. Die im dritten
+Durchlauf am erschöpften Budget gescheiterten 18 Zellen wurden nachgeholt —
+diesmal **nach Priorität geordnet** (Junkers/Bosch und Wolf zuerst) und mit einem
+Deckel von 8 Suchen je Zelle, damit alle 18 durchkommen. Ergebnis: **147 von 200
+Suchen verbraucht, alle 18 Zellen ausgeführt.**
+
+## 10.1 Ergebnis
+
+| Kennzahl | Durchlauf 1 | Durchlauf 3 | **jetzt** | Ziel |
+|---|---:|---:|---:|---:|
+| Fälle | 8 | 150 | **269** | 120–250 ✅ |
+| Fehlercode-Einträge | 52 | 74 | **100** | 200–500 ❌ |
+| Symptomklassen | 6 | 38 | 51 | – |
+| Sprachbrücken-Einträge | 17 | 40 | **56** | – |
+
+Und die eigentliche Korrektur — die Herstellerschieflage ist weg:
+
+| Hersteller | vorher | **jetzt** | Anteil | Codes |
+|---|---:|---:|---:|---:|
+| Vaillant | 70 | 79 | 29 % | 23 |
+| Viessmann | 67 | 82 | 30 % | 19 |
+| Buderus | 13 | 41 | 15 % | 17 |
+| Junkers/Bosch | **0** | **36** | 13 % | 22 |
+| Wolf | **0** | **31** | 12 % | 19 |
+
+Beide Nulllücken sind geschlossen. Codes mit Fallverankerung: von 42 auf **80 von
+100** — der Anteil verwaister Codeknoten ist von 43 % auf 20 % gefallen.
+
+Auch die zweite dokumentierte Lücke ist bearbeitet: **112 der 269 Fälle tragen
+keinen Fehlercode** (42 %). Der erste Durchlauf hatte dafür genau einen Fall und
+nannte es „die schwächste Stelle des Bestands" — der Zielnutzer beschreibt eben
+meist keinen Code. Neu abgedeckt sind Geräusche, Gerüche, Warmwasserverhalten,
+Druckverhalten und Ausfälle ohne Anzeige.
+
+## 10.2 Die Gegenprüfung hat 40 % verworfen
+
+235 Kandidaten wurden erhoben, **95 davon in einer adversarischen Offline-Prüfung
+verworfen** — je Suchzelle ein Prüfer, der jeden Fall gegen sechs Kriterien hielt
+und im Zweifel verwerfen sollte. Bewusst ohne Suchzugriff: die knappe Ressource
+ist die Suche, nicht das Denken.
+
+Die häufigsten Verwerfungsgründe:
+
+- **Überdehnung** — eine Ursache steht als Tatsache statt als ungesicherte
+  Richtung, oder `symptom_technisch` nennt eine Fehlerphase, die aus dem Titel
+  nicht ableitbar ist. Beispiel: ein Fall räumte selbst ein, „Bedeutung des Codes
+  EF nicht belegt", behauptete aber eine „Störabschaltung des Feuerungsautomaten".
+- **Kein individueller Fall** — die URL zeigt auf eine Codedatenbank oder
+  Ratgeberseite statt auf die Schilderung eines Betreibers.
+- **Modellreihe unbelegt** — der Titel nennt nur „Fehlercode OE" ohne Baureihe,
+  die Zuordnung kam aus der Zusammenfassung.
+
+Danach blieben 130; nach Abzug von 9 Dubletten wurden **121 aufgenommen**.
+
+## 10.3 Was bei der Aufnahme bereinigt wurde
+
+| Bereinigung | Anzahl | Begründung |
+|---|---:|---|
+| Codeangabe normalisiert | 16 | `6A / 227` → `6A 227` (Basis- plus Zusatzcode), Wolf `52` → `052`, Klammerzusätze entfernt |
+| Codeangabe entwertet | 4 | Aufzählungen wie `004 und 061` oder `E8; A4` sind kein Code — Feld auf `null`, Angabe nach `unsicherheiten` (Regel 1) |
+| `code_offizielle_bedeutung` entwertet | 23 | Der Text trug den Herkunftsvorbehalt selbst („laut Zusammenfassung", „nicht verifiziert"). Eine aus der Suchzusammenfassung abgeleitete Bedeutung ist keine offizielle Bedeutung |
+| Fälle wegen Quellsprache entfernt | 2 | Zwei polnischsprachige Foren. Die Auftragskonfiguration nennt „primär Deutsch, Englisch nur ergänzend"; zusätzlich ist eine fremdsprachige Überschrift ohne Seitenabruf nicht auf Übersetzungsfehler prüfbar (Regel 8) |
+
+## 10.4 Neue Symptomklassen, darunter eine sicherheitskritische
+
+13 neue Leitsymptomklassen. Die wichtigste ist **`gasgeruch`** — bisher kannte das
+Vokabular nur `abgasgeruch`. Das ist keine Feinheit: Abgasgeruch bedeutet
+verbrannte Abgase, Gasgeruch unverbranntes Brenngas. Der Brückeneintrag ist
+bewusst so gefasst, dass die reine Geruchsschilderung ihn auslöst, ohne dass der
+Anrufer irgendetwas anderes angeben muss.
+
+Weiter neu: `display_ohne_funktion` (das Gerät ist dunkel, ein Code ist deshalb
+gar nicht ablesbar — der Fall, in dem eine codebasierte Voranalyse strukturell
+scheitert), `abgasweg_undicht`, `ueberdruck_abschaltung`,
+`druckanzeige_weicht_ab`, `modulation_untere_grenze`, `mehrere_codes_gleichzeitig`,
+`stoerung_nach_gasumstellung` sowie vier Geräuschklassen.
+
+Eine Klasse wurde nach der Extraktion korrigiert: `waermetauscherschaden` stand
+als Leitsymptom, ist aber ein Befund am geöffneten Gerät. Der Extraktionsagent
+hat sie folgerichtig als nicht belegbar zurückgewiesen, statt einen Laienausdruck
+zu erfinden — sie liegt jetzt auf der Achse `fallmerkmal`.
+
+## 10.5 Was sich NICHT verbessert hat
+
+**Der Bestätigungsgrad.** Weiterhin 3 bestätigte Fälle, jetzt neben 266
+Vermutungen — ein Anteil von 1,1 %. Der Grund ist unverändert: WebFetch bleibt
+für jede Domain blockiert, eine Lösungsbestätigung steht am Threadende und ist
+ohne Seitenabruf nicht lesbar.
+
+Das ist die zentrale Einschränkung des gesamten Bestands. Gemessen am Leitprinzip
+des Auftrags — belegte Fälle schlagen Menge — sind 269 Fälle mit 3 Bestätigungen
+ein **Breiten-, kein Tiefengewinn**. Der Bestand taugt als Landkarte des
+Problemraums, nicht als Ground Truth.
+
+**Die Fehlercode-Einträge.** 100 statt der geforderten 200–500. Der erste
+Durchlauf hat vollständige Herstellertabellen bewusst nicht übernommen
+(Datenbankschutz §87a ff. UrhG); diese Linie ist beibehalten. Die 100 Codes sind
+fallverankert oder stammen aus derselben Codegruppe — der Zielkorridor ist ohne
+Übernahme ganzer Tabellen nicht erreichbar, und das ist eine Rechts-, keine
+Datenentscheidung.
+
+**Die TDM-Prüfung.** Unverändert für alle 12 Domains ungeprüft.
+
+## 10.6 Regeltreue über den Gesamtbestand
+
+| Prüfung | Verstöße |
+|---|---:|
+| Regel 6 – `[Fachkraft]`-Präfix bei gas/strom über alle 269 Fälle | 0 |
+| Regel 2 – `symptom_laie` über 200 Zeichen | 0 |
+| Regel 1 – Codebedeutung ohne Fehlercode | 0 |
+| Validator gesamt | 0 Fehler, 1 Warnung |
+
+Die eine verbleibende Warnung ist berechtigt und soll stehen bleiben: VIE-0002 und
+VIE-0003 teilen sich eine Quelle und sind damit nicht unabhängig.
+
+## 10.7 Nächste Schritte
+
+1. **Umgebung mit freiem HTTP-Ausgang.** Bleibt Voraussetzung null. Ohne sie
+   keine TDM-Prüfung und kein einziger weiterer `bestaetigt`-Fall.
+2. **Die 269 Fälle stichprobenartig gegen die Threads prüfen**, sobald
+   Seitenabruf möglich ist. Erst dann lässt sich sagen, wie viele aufsteigen und
+   wie viele zu verwerfen sind. Die Gegenprüfung hat 40 % der Rohkandidaten
+   aussortiert — eine ähnliche Quote ist auch für die aufgenommenen nicht
+   auszuschließen.
+3. **Eval-Split** bleibt ausgesetzt, bis das Kriterium für `bestaetigt`
+   festgeschrieben ist und genügend bestätigte Fälle vorliegen.

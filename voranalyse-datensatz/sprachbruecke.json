@@ -4,7 +4,7 @@
     "status": "Teilbestand aus den in dieser Sitzung gesichteten Beitraegen",
     "zweck": "Abbildung umgangssprachlicher Symptombeschreibungen auf technische Symptomklassen. Quelle sind alle gesichteten Beitraege, auch ungeloeste.",
     "belegzahl_bedeutung": "Anzahl der Beitraege, in denen der Ausdruck gesichtet wurde. Das ist die Beleghaeufigkeit des WORTES und ausdruecklich keine Aussage ueber die Haeufigkeit der dahinterliegenden Ursache (Regel 4).",
-    "eintraege_gesamt": 40,
+    "eintraege_gesamt": 56,
     "ziel_art": "Achse der Zielklasse in fehlercode_taxonomie.json. Nur ziel_art='leitsymptom' ist Ziel einer Laieneingabe; die uebrigen Achsen dienen der Normalisierung, der Kontextauswertung oder der Fachkraftseite.",
     "gefahrenkategorie": "Von der Zielklasse geerbt, nicht am Eintrag gepflegt. Laesst sich kein Ziel aufloesen, ist konservativ wie 'gas' zu verfahren (Regel 8).",
     "herkunft_neue_eintraege": "Die am 22.08.2026 ergaenzten Eintraege wurden aus den Laienschilderungen der im Sammellauf erfassten Faelle zurueckuebersetzt. Diese Schilderungen sind bereits Zusammenfassungen, nicht der Originalwortlaut der Nutzer - der Ausdruck ist deshalb eine plausible alltagssprachliche Fassung, kein belegtes Zitat."
@@ -629,6 +629,262 @@
       "anmerkung": "Reiner Zeitbezug zum Einbau des Geraets, keine Beschreibung der Stoerung selbst. Abzugrenzen vom Zeitbezug zu einem Wartungstermin.",
       "ziel_art": "leitsymptom",
       "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "sie regelt nicht weit genug runter",
+      "varianten": [
+        "sie geht mit der Leistung nicht weiter runter"
+      ],
+      "symptomklasse": "modulation_untere_grenze",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "takten_kurze_brennerlaufzeit",
+        "stoerabschaltung"
+      ],
+      "anmerkung": "Beschrieben wird die Leistung, die nicht weit genug heruntergeht. Laeuft der Brenner dagegen nur kurz und startet immer wieder neu, gehoert die Schilderung zu takten_kurze_brennerlaufzeit.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "sobald sie kleiner brennen soll, wird sie zu heiss und schaltet ab",
+      "varianten": [],
+      "symptomklasse": "modulation_untere_grenze",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerabschaltung",
+        "takten_kurze_brennerlaufzeit"
+      ],
+      "anmerkung": "Traegt nur, wenn das Abschalten ausdruecklich an das Kleinerbrennen gekoppelt geschildert wird. Eine Abschaltung ohne diesen Bezug gehoert zu stoerabschaltung.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "im Display stehen zwei Fehlermeldungen gleichzeitig",
+      "varianten": [
+        "sie zeigt zwei Fehlernummern an"
+      ],
+      "symptomklasse": "mehrere_codes_gleichzeitig",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerabschaltung"
+      ],
+      "anmerkung": "Nur bei mehreren zugleich anstehenden Meldungen. Welche davon die fuehrende ist, geht aus der Schilderung nicht hervor. Eine einzelne Meldung gehoert zu stoerabschaltung.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "der Zeiger am Geraet und das Display zeigen unterschiedlichen Druck",
+      "varianten": [
+        "ich weiss nicht, welcher der beiden Werte stimmt"
+      ],
+      "symptomklasse": "druckanzeige_weicht_ab",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "druckverlust_im_heizkreis",
+        "ueberdruck_abschaltung"
+      ],
+      "anmerkung": "Traegt nur, wenn zwei Anzeigen einander widersprechen. Faellt oder steigt der Druck auf beiden Anzeigen gleich, gehoert die Schilderung zu druckverlust_im_heizkreis oder ueberdruck_abschaltung.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "seit der Umstellung auf Fluessiggas kommen Fehlermeldungen",
+      "varianten": [
+        "vorher gab es diese Meldungen nicht"
+      ],
+      "symptomklasse": "stoerung_nach_gasumstellung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerabschaltung",
+        "kein_brennerstart"
+      ],
+      "anmerkung": "Traegt nur mit dem geschilderten zeitlichen Zusammenhang zum Wechsel der Gasart. Ohne diesen Bezug bleibt es eine gewoehnliche Stoerabschaltung.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es pfeift, wenn die Heizung laeuft",
+      "varianten": [
+        "ein Ton wie eine Sirene aus der Ferne",
+        "seit dem Einbau ein dauerhafter Pfeifton",
+        "ein Ton und dazu ein starkes Rauschen am Geraet"
+      ],
+      "symptomklasse": "geraeusch_pfeifen",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "geraeusch_stroemung",
+        "geraeusch_droehnen"
+      ],
+      "anmerkung": "Hoher, gleichbleibender Ton. Ein mitgeschildertes Rauschen schliesst die Klasse nicht aus; wird nur ein Rauschen ohne Ton beschrieben, gehoert es zu geraeusch_stroemung, ein tiefes Laufgeraeusch zu geraeusch_droehnen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "beim Heizen pfeift es, beim Warmwasser ist der Ton weg",
+      "varianten": [],
+      "symptomklasse": "geraeusch_pfeifen",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Die Angabe, in welcher Betriebsart der Ton verschwindet, ist ein Zusatzhinweis. Ohne die Schilderung des Tons selbst traegt sie die Klasse nicht.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es roehrt laut wie ein Motor, der hochdreht",
+      "varianten": [
+        "seit dem Einbau roehrt es beim Heizen laut"
+      ],
+      "symptomklasse": "geraeusch_droehnen",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "geraeusch_pfeifen"
+      ],
+      "anmerkung": "Tiefes, anhaltendes Laufgeraeusch. Ein hoher Ton gehoert zu geraeusch_pfeifen, einzelne harte Schlaege zu geraeusch_poltern_schlagen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "das Geraet schnauft laut",
+      "varianten": [],
+      "symptomklasse": "geraeusch_droehnen",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Pulsierendes, schnaufendes Geraeusch aus dem Geraet selbst. Klopfen oder Schlagen in den Leitungen gehoert zu geraeusch_poltern_schlagen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es riecht nach Gas",
+      "varianten": [
+        "im Heizungsraum riecht es nach Gas",
+        "mal riecht es stark, mal gar nicht"
+      ],
+      "symptomklasse": "gasgeruch",
+      "sinneskanal": "geruch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "abgasgeruch"
+      ],
+      "anmerkung": "Sicherheitskritisch: Die reine Geruchsschilderung loest diese Klasse aus, auch wenn sonst nichts angegeben wird - kein Fehlercode, kein Geraeusch, keine Angabe zum Betrieb. Ein wechselnd starker oder zeitweise gar nicht wahrnehmbarer Geruch spricht nicht dagegen. Abzugrenzen von abgasgeruch: dort geht es um den Geruch verbrannter Abgase, hier um unverbranntes Brenngas - das ist die dringlichere Lage.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "das Display bleibt schwarz",
+      "varianten": [
+        "die Anzeige bleibt dunkel und die Heizung laeuft nicht mehr",
+        "das Bedienmodul bleibt dunkel und laesst sich nicht einschalten",
+        "aus- und wieder einschalten aendert nichts"
+      ],
+      "symptomklasse": "display_ohne_funktion",
+      "sinneskanal": "optisch",
+      "belegzahl": 3,
+      "mehrdeutig_zu": [
+        "bedienung_gesperrt",
+        "kommunikationsstoerung_regler"
+      ],
+      "anmerkung": "Weil nichts angezeigt wird, kann der Anrufer keinen Stoercode ablesen. Abzugrenzen von bedienung_gesperrt, wo die Anzeige leuchtet und sich nur nichts einstellen laesst.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "strom",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "das Geraet ist ganz tot - kein Licht, kein Geraeusch",
+      "varianten": [
+        "seit es ein Problem mit der Sicherung gab, reagiert nichts mehr",
+        "das Geraet reagiert nicht mehr"
+      ],
+      "symptomklasse": "display_ohne_funktion",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerabschaltung",
+        "kein_brennerstart"
+      ],
+      "anmerkung": "Kein Licht und kein Geraeusch bedeutet, dass auch keine Stoermeldung sichtbar ist. Leuchtet die Anzeige und springt nur der Brenner nicht an, gehoert es zu kein_brennerstart.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "strom",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "die Heizung schaltet ab und der Zeiger steht bei 4 bar",
+      "varianten": [],
+      "symptomklasse": "ueberdruck_abschaltung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerabschaltung",
+        "druckanzeige_weicht_ab"
+      ],
+      "anmerkung": "Hier steht der Druck deutlich zu hoch - Gegenstueck zu druckverlust_im_heizkreis. Laeuft das Geraet trotz hoher Anzeige weiter, ist eher druckanzeige_weicht_ab zu pruefen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "aus der Heizung laeuft Wasser heraus",
+      "varianten": [],
+      "symptomklasse": "wasseraustritt_am_geraet",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "kondensataustritt",
+        "waermetauscherschaden",
+        "druckverlust_im_heizkreis"
+      ],
+      "anmerkung": "Reine Beobachtung von austretendem Wasser am Geraet, ohne dass eine Kondensatspur geschildert wird; wird ausdruecklich tropfendes Kondensat beschrieben, gehoert es zu kondensataustritt. Ein Waermetauscherschaden ist eine moegliche Ursache, keine Laienbeschreibung.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "unter dem Abgasrohr ist das Blech gerissen",
+      "varianten": [],
+      "symptomklasse": "abgasweg_undicht",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "abgasgeruch",
+        "waermetauscherschaden"
+      ],
+      "anmerkung": "Rein optischer Befund am Blech; kommt eine Geruchsschilderung dazu, ist zusaetzlich abgasgeruch zu pruefen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "die Wasserleitung brummt, wenn Wasser laeuft",
+      "varianten": [],
+      "symptomklasse": "geraeusch_kaltwasserleitung",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "geraeusch_stroemung",
+        "geraeusch_droehnen"
+      ],
+      "anmerkung": "Das Geraeusch haengt am Zapfen von kaltem Wasser, nicht am Heizbetrieb; wird das Rauschen im Geraet selbst beschrieben, ist geraeusch_stroemung gemeint.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
       "zusatzziele": []
     }
   ]

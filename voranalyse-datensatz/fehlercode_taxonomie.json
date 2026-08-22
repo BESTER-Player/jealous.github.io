@@ -4,8 +4,8 @@
     "status": "Teilbestand - bewusst keine vollstaendigen Herstellertabellen",
     "auswahlregel": "Aufgenommen wurden Codes, die einen Fall in faelle.jsonl verankern, sowie Codes aus denselben Codegruppen. Vollstaendige Codelisten der Hersteller wurden NICHT uebernommen: einzelne Codes sind Fakten, die Liste als Ganzes kann als Datenbank nach §87a ff. UrhG geschuetzt sein. Konservative Wahl nach Regel 8.",
     "hinweis": "Bedeutungen sind eigene Formulierungen, keine Uebernahme von Tabellenzeilen. Wo 'offizielle_bedeutung' null ist, war die Bedeutung nicht belastbar zu belegen - nicht mit Plausiblem auffuellen.",
-    "codes_gesamt": 74,
-    "symptomklassen_gesamt": 38,
+    "codes_gesamt": 100,
+    "symptomklassen_gesamt": 51,
     "achsen": {
       "leitsymptom": "Beobachtbares Symptom, Ziel der Laieneingabe.",
       "fallmerkmal": "Merkmal des Fallverlaufs, kein Symptom.",
@@ -237,7 +237,8 @@
         "ecoTEC plus 824",
         "ecoTEC plus 831",
         "ecoTEC 831",
-        "ecoTEC (Variante im Titel nicht praezisiert)"
+        "ecoTEC (Variante im Titel nicht praezisiert)",
+        "VCS 196/2 C 150"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
@@ -249,7 +250,8 @@
         "VAI-0043",
         "VAI-0044",
         "VAI-0046",
-        "VAI-0047"
+        "VAI-0047",
+        "VAI-0079"
       ],
       "unsicherheiten": "Bewertet wird der Druckanstieg beim Pumpenstart, nicht der absolute Anlagendruck. In Ratgeberquellen wird der Code haeufig als 'Wasserdruck zu niedrig' wiedergegeben - siehe Musterabweichung M1 im Report.",
       "code_typ": "basiscode",
@@ -426,7 +428,8 @@
         "Vitodens 300",
         "Vitodens 200-W",
         "Vitodens 200-W (B2HA)",
-        "Vitodens 300-W"
+        "Vitodens 300-W",
+        "Vitodens 300-W (Typ B3HA)"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Stoerung-Feuerungsautomat-FD-nur-bei-geschlossene/td-p/606913",
@@ -435,7 +438,8 @@
         "VIE-0013",
         "VIE-0014",
         "VIE-0022",
-        "VIE-0034"
+        "VIE-0034",
+        "VIE-0079"
       ],
       "unsicherheiten": "Bedeutung nicht verifiziert. In Threads regelmaessig gemeinsam mit EB und FE genannt; Viessmann-Codes sind baureihen- und reglergenerationsabhaengig.",
       "code_typ": "basiscode",
@@ -448,13 +452,15 @@
       "betroffene_baureihen": [
         "Logamax plus GB172",
         "Logamax plus GB172 T",
-        "Logamax plus GB172-20"
+        "Logamax plus GB172-20",
+        "Logamax plus GB152-16"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.manualslib.de/manual/120641/Buderus-Logamax-Plus-Gb172-T.html?page=43",
       "quelle_datum": null,
       "fall_ids": [
-        "BUD-0003"
+        "BUD-0003",
+        "BUD-0025"
       ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
@@ -469,7 +475,8 @@
         "Logamax plus GB172",
         "Logamax U154",
         "Logamax plus GB172-24K",
-        "Logamax plus GB172-24"
+        "Logamax plus GB172-24",
+        "Logamax plus GB162-15"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.ersatzteile-koeln.de/buderus-fehlermeldung-ems-steuerung/stoerung-6/fehlercode-6a-xxx/fehlermeldung-6a227.php",
@@ -478,7 +485,8 @@
         "BUD-0001",
         "BUD-0002",
         "BUD-0004",
-        "BUD-0005"
+        "BUD-0005",
+        "BUD-0019"
       ],
       "unsicherheiten": null,
       "code_typ": "zusatzcode",
@@ -489,12 +497,15 @@
       "code": "6L",
       "offizielle_bedeutung": "Verriegelnde Stoerung nach wiederholt misslungenem Zuendversuch",
       "betroffene_baureihen": [
-        "Logamax plus GB172"
+        "Logamax plus GB172",
+        "Logamax plus GB162-25 T40 S"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.manualslib.de/manual/120641/Buderus-Logamax-Plus-Gb172-T.html?page=43",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "BUD-0037"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -530,12 +541,15 @@
       "code": "A7",
       "offizielle_bedeutung": "Warmwasser-NTC hat Unterbrechung",
       "betroffene_baureihen": [
-        "Cerapur"
+        "Cerapur",
+        "ZWR 18-4 KE 23 B"
       ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0022"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -544,11 +558,15 @@
       "hersteller": "Junkers/Bosch",
       "code": "Ad",
       "offizielle_bedeutung": "Speicher-NTC hat Unterbrechung oder Kurzschluss",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ZBS 3-16"
+      ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0030"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -609,11 +627,15 @@
       "hersteller": "Junkers/Bosch",
       "code": "C6",
       "offizielle_bedeutung": "Druckdosenkontakt bleibt offen",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "Cerastar"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0020"
+      ],
       "unsicherheiten": "Pruefumfang laut Quellen: Druckdose, Luftweg, Ventilator, Steuerleitung, Abgasrohrlaenge.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -622,11 +644,15 @@
       "hersteller": "Junkers/Bosch",
       "code": "CC",
       "offizielle_bedeutung": "Aussenfuehler hat Unterbrechung",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ZBS 7-22 MR A 21/23"
+      ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0031"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -635,11 +661,15 @@
       "hersteller": "Junkers/Bosch",
       "code": "E2",
       "offizielle_bedeutung": "Vorlauf-NTC hat Unterbrechung oder Kurzschluss",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "Cerapur ZSBR 7-25 A21"
+      ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0002"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -648,11 +678,17 @@
       "hersteller": "Junkers/Bosch",
       "code": "E5",
       "offizielle_bedeutung": "Temperatur am Brenner-NTC ueberschritten",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "Cerastar ZWN 18/7",
+        "ZWN 18-6 KE"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0018",
+        "JUN-0028"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -688,12 +724,21 @@
       "code": "EA",
       "offizielle_bedeutung": "Kein Ionisationsstrom - keine Flamme erkannt",
       "betroffene_baureihen": [
-        "Cerapur"
+        "Cerapur",
+        "Cerapur ZSB 14-3",
+        "Cerapur ZBR 42-3 A23",
+        "Cerastar ZWR 24-3",
+        "Cerasmart ZWB 7-26"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0003",
+        "JUN-0004",
+        "JUN-0021",
+        "JUN-0027"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -715,11 +760,15 @@
       "hersteller": "Junkers/Bosch",
       "code": "FA",
       "offizielle_bedeutung": "Ionisationsstrom bleibt nach der Regelabschaltung bestehen",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ZWR 18-4 KE"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "JUN-0029"
+      ],
       "unsicherheiten": "Als Pruefpunkt wird die Gasarmatur genannt - sicherheitsrelevant, da auf ein nicht schliessendes Ventil hindeutend.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -731,12 +780,19 @@
       "betroffene_baureihen": [
         "CGB-2",
         "MGK",
-        "FGB"
+        "FGB",
+        "CGB-35",
+        "CGB-K-20",
+        "CGS-2-20"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "WOL-0010",
+        "WOL-0021",
+        "WOL-0022"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -749,12 +805,15 @@
         "CGB-2",
         "CGB",
         "MGK",
-        "FGB"
+        "FGB",
+        "CGB-2-24"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "WOL-0001"
+      ],
       "unsicherheiten": "In mehreren Quellen ausdruecklich als nicht-spezifischer Code beschrieben: mehrere Defekte kommen infrage.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -763,11 +822,17 @@
       "hersteller": "Wolf",
       "code": "005",
       "offizielle_bedeutung": "Flammenausfall im Betrieb, Luft-Abgas-System pruefen",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "CGB(-K)-20",
+        "CGB-2-20"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "WOL-0011",
+        "WOL-0020"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -1048,7 +1113,8 @@
         "Vitodens 200-W",
         "Vitodens 200-W (Typangabe laut Titel W2BA)",
         "Vitodens 300-W",
-        "Vitodens 100-W"
+        "Vitodens 100-W",
+        "Vitodens 200 W"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Fehler-F2/td-p/114865",
@@ -1057,7 +1123,8 @@
         "VIE-0023",
         "VIE-0025",
         "VIE-0031",
-        "VIE-0046"
+        "VIE-0046",
+        "VIE-0078"
       ],
       "code_typ": "basiscode",
       "gehoert_zu_code": null,
@@ -1084,7 +1151,8 @@
         "VIE-0032",
         "VIE-0044",
         "VIE-0045",
-        "VIE-0067"
+        "VIE-0067",
+        "VIE-0077"
       ],
       "code_typ": "basiscode",
       "gehoert_zu_code": null,
@@ -1280,6 +1348,454 @@
       "code_typ": "basiscode",
       "gehoert_zu_code": null,
       "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Der Threadtitel selbst uebersetzt den Code mit \"Vorlaufsensor groesser 95 Grad\". Eine Bestaetigung dieser Bedeutung aus der Herstellerdokumentation lag im Suchergebnis nicht vor."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "F0",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Cerapur ZWB 28-3 A23"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/147226/Junkers-Cerapur-ZWB-28-3-A23-Stoerung-F0?PostSort=1",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0001",
+        "JUN-0038"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "A9",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Cerapur Acu"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/junkers-cerapur-acu-fehler-a9.5738/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0006"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "263",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Condens GC5300i WM"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.heizungsforum.de/threads/bosch-condens-gc5300i-wm-fehler-263.19311/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0008"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "2917",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Condens GC9001iW 20 E"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/immer-wieder-heizungsausfall-mit-fehlermeldung-2917-bosch-condens-gc9001iw-20-e-21-23.29705/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0010"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "281",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Condens 5800iW"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.heizungsforum.de/threads/fehler-281-bosch-condens-5800iw.36797/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0011"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "A51-6006",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Condens 7000 (mit Solarmodul MS200)"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.heizungsforum.de/threads/bosch-condens-7000-ms200-a51-6006.13133/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0012"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Junkers/Bosch",
+      "code": "Lo",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Cerastar ZWN 24-7 KE"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/fehlermeldung-lo-gas-heizgeraet-junker-cerastar-zwn24-7ke.27211/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "JUN-0017"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "013",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-2"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/wolf-cgb-2-stoerung-13-abgasfuehler-defekt.16519/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0005"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "014",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-2-20 mit Warmwasserspeicher TSW-120 / CSW-120"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/247128/Wolf-CGB-2-20-mit-Warmwasserspeicher-TSW-120-CSW-120-Warmwasserfuehler-defekt-Fehler-14?PostSort=1",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0006"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "052",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGS-2-20",
+        "CGW-2 20/120"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/wolf-cgs-2-20-fehler-52-keine-heizung-kein-ww.22994/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0013",
+        "WOL-0031"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "024",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-20"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/176969/Wolf-CGB-20-Fehler-24-Gasgeblaese",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0016"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "015",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-20"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/267550/Wolf-CGB-20-Stoerung-015-Keine-Temperaturmesswerte",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0017"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "003",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "MGK-2-300 (Gas-Brennwertkessel MGK-2)"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/186006/Wolf-MGK-2-300-faehrt-immer-in-Stoerung-3",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0018"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "9L 234",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB162-15"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/187956/Buderus-GB162-15-Fehlercode-9L234",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0020"
+      ],
+      "code_typ": "zusatzcode",
+      "gehoert_zu_code": "9L",
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "4F 219",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB152"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/139986/Ausfaelle-Buderus-Logamax-plus-GB152-Fehler-4F-219",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0023"
+      ],
+      "code_typ": "zusatzcode",
+      "gehoert_zu_code": "4F",
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "1C",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB152",
+        "Logamax U154-20K"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/logamax-plus-gb-152-nach-duschen-fehler-1c.32395/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0024",
+        "BUD-0030"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "6",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax U124"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/136951/Buderus-Logamax-U-124-Fehlermeldung-6-HILFE",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0029"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "P2",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax U154-20K"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/buderus-u154-20k-mit-rc-200-fehler-p2.17064/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0031"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "207",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB192i"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/buderus-gb192i-fehler-207-wasser-plaetschert-aus-kondensatablauf.37384/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0034"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "6C 306",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB162"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/logamax-plus-gb162-volles-programm.13978/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0035"
+      ],
+      "code_typ": "zusatzcode",
+      "gehoert_zu_code": "6C",
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "9L",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB112"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/buderus-gb-112-fehler-6a-nach-9l.27015/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0036",
+        "BUD-0038"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "9L 238",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB162-25 V3"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/fehler-9l-238-gaskessel-buderus-gb-162-25-v3.9002/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0039"
+      ],
+      "code_typ": "zusatzcode",
+      "gehoert_zu_code": "9L",
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "H07",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB132-24"
+      ],
+      "gefahrenkategorie": "wasser",
+      "quelle_url": "https://www.heizungsforum.de/threads/buderus-gb132-24-fehler-h7-wasserdruck.21450/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0040"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "4C",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB122"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/142220/Buderus-GB122-Fehler-4c-bei-Warmwasser-Ratlos-Bitte-HILFE",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0041"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "056",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-2-14"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/166275/Problem-mit-neuer-CGB-2-14-Fehlercode-056",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0029"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+    },
+    {
+      "hersteller": "Wolf",
+      "code": "061",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "CGB-K-20"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/204311/CGB-K-20-nach-Wartung-Stoerung-61",
+      "quelle_datum": null,
+      "fall_ids": [
+        "WOL-0030"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem zweiten Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert."
     }
   ],
   "symptomklassen": [
@@ -1294,7 +1810,12 @@
         "VAI-0063",
         "VIE-0019",
         "VIE-0024",
-        "VIE-0030"
+        "VIE-0030",
+        "JUN-0009",
+        "JUN-0024",
+        "WOL-0002",
+        "WOL-0025",
+        "BUD-0033"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [
@@ -1312,7 +1833,12 @@
       "fall_ids": [
         "VAI-0022",
         "VAI-0025",
-        "VAI-0064"
+        "VAI-0064",
+        "WOL-0019",
+        "VIE-0072",
+        "VIE-0073",
+        "VIE-0074",
+        "WOL-0027"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1454,7 +1980,14 @@
       "status": "aktiv",
       "fall_ids": [
         "VAI-0056",
-        "BUD-0011"
+        "BUD-0011",
+        "JUN-0014",
+        "JUN-0015",
+        "VIE-0070",
+        "VAI-0073",
+        "VAI-0074",
+        "VIE-0075",
+        "BUD-0017"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1560,7 +2093,8 @@
         "VAI-0016",
         "VAI-0045",
         "VAI-0048",
-        "VIE-0041"
+        "VIE-0041",
+        "VIE-0082"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1617,7 +2151,18 @@
         "VAI-0070",
         "VIE-0053",
         "BUD-0008",
-        "BUD-0009"
+        "BUD-0009",
+        "JUN-0005",
+        "JUN-0007",
+        "JUN-0025",
+        "WOL-0007",
+        "WOL-0014",
+        "WOL-0015",
+        "JUN-0033",
+        "JUN-0034",
+        "VAI-0078",
+        "BUD-0018",
+        "BUD-0021"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1646,7 +2191,11 @@
       "fall_ids": [
         "VAI-0059",
         "VIE-0047",
-        "VIE-0048"
+        "VIE-0048",
+        "VAI-0076",
+        "VAI-0077",
+        "JUN-0036",
+        "JUN-0037"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1674,7 +2223,10 @@
       "status": "aktiv",
       "fall_ids": [
         "VAI-0066",
-        "VAI-0068"
+        "VAI-0068",
+        "VAI-0071",
+        "VIE-0068",
+        "BUD-0014"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1687,7 +2239,8 @@
       "gefahrenkategorie": "gas",
       "status": "aktiv",
       "fall_ids": [
-        "VAI-0067"
+        "VAI-0067",
+        "VIE-0081"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1741,7 +2294,13 @@
       "fall_ids": [
         "VIE-0049",
         "VIE-0050",
-        "VIE-0051"
+        "VIE-0051",
+        "JUN-0023",
+        "WOL-0023",
+        "VAI-0075",
+        "VIE-0076",
+        "JUN-0035",
+        "WOL-0028"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1767,7 +2326,9 @@
       "gefahrenkategorie": "wasser",
       "status": "aktiv",
       "fall_ids": [
-        "VIE-0058"
+        "VIE-0058",
+        "WOL-0003",
+        "WOL-0004"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1798,6 +2359,181 @@
       "nachfolger": [],
       "abgrenzung_zu": [],
       "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "modulation_untere_grenze",
+      "achse": "leitsymptom",
+      "beschreibung": "Geraet moduliert nicht bis zur erwarteten unteren Grenze herunter oder verhaelt sich am Lastpunkt auffaellig.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "JUN-0013",
+        "WOL-0009"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "mehrere_codes_gleichzeitig",
+      "achse": "leitsymptom",
+      "beschreibung": "Das Geraet zeigt zwei oder mehr Codes zugleich; welcher der fuehrende ist, geht aus der Schilderung nicht hervor.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "JUN-0019"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "druckanzeige_weicht_ab",
+      "achse": "leitsymptom",
+      "beschreibung": "Analoge und digitale Druckanzeige zeigen unterschiedliche Werte; welcher stimmt, ist offen.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "WOL-0008"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "stoerung_nach_gasumstellung",
+      "achse": "leitsymptom",
+      "beschreibung": "Stoerungen treten erst seit einer Umstellung der Gasart oder seit Fluessiggasbetrieb auf.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "WOL-0012"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "geraeusch_pfeifen",
+      "achse": "leitsymptom",
+      "beschreibung": "Pfeifender oder sirenenartiger Ton im Betrieb.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0069",
+        "BUD-0015"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "geraeusch_droehnen",
+      "achse": "leitsymptom",
+      "beschreibung": "Roehrendes, droehnendes oder pulsierend schnaufendes Betriebsgeraeusch.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0016",
+        "JUN-0032"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "gasgeruch",
+      "achse": "leitsymptom",
+      "beschreibung": "Wahrnehmbarer Gasgeruch am oder um das Geraet. Abzugrenzen von Abgasgeruch: Gasgeruch weist auf unverbranntes Brenngas hin und ist die dringlichere Lage.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0071"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "display_ohne_funktion",
+      "achse": "leitsymptom",
+      "beschreibung": "Display oder Bedienmodul bleibt dunkel und ohne Funktion; ein Stoercode ist deshalb nicht ablesbar.",
+      "gefahrenkategorie": "strom",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0072",
+        "WOL-0024",
+        "WOL-0026",
+        "BUD-0027"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "waermetauscherschaden",
+      "achse": "fallmerkmal",
+      "beschreibung": "Am Geraet wurde der Waermetauscher bereits ersetzt, teils wiederholt. Kein Leitsymptom, sondern ein Merkmal des Fallverlaufs.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0022"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Aus dem zweiten Sammellauf. Am 22.08.2026 von 'leitsymptom' auf 'fallmerkmal' umgestellt: die Schilderung beschreibt einen Befund, keine Beobachtung des Betreibers am laufenden Geraet."
+    },
+    {
+      "klasse": "ueberdruck_abschaltung",
+      "achse": "leitsymptom",
+      "beschreibung": "Abschaltung wegen deutlich zu hohem Anlagendruck.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0026"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "wasseraustritt_am_geraet",
+      "achse": "leitsymptom",
+      "beschreibung": "Wasser tritt am Geraet aus, ohne dass eine Kondensatspur erkennbar ist.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0028"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "abgasweg_undicht",
+      "achse": "leitsymptom",
+      "beschreibung": "Undichtigkeit im abgasfuehrenden Bereich, etwa Risse am Abgasstutzen oder an angrenzenden Blechteilen.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0032"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "geraeusch_kaltwasserleitung",
+      "achse": "leitsymptom",
+      "beschreibung": "Stroemungs- oder Koerperschallgeraeusch an der Kaltwasserzuleitung.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0080"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem zweiten Sammellauf vom 22.08.2026."
     }
   ]
 }
