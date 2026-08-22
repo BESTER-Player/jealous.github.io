@@ -370,3 +370,140 @@ Die Schätzung des ersten Durchlaufs — grob 400–600 gelesene Threads für 12
 bestätigte Fälle — bleibt die Planungsgröße. Sie ist aus 27 geschätzten
 Diskussionen abgeleitet und entsprechend grob (Befund 14); als Größenordnung
 taugt sie, als Zusage nicht.
+
+---
+
+# 9. Dritter Durchlauf: Sammellauf
+
+Stand 22.08.2026. 30 Suchzellen über Hersteller, Baureihen, Fehlercodes und
+codelose Symptome; anschließend vier Agenten für Schritt 5 (Sprachbrücke).
+
+## 9.1 Ergebnis
+
+| Kennzahl | vorher | jetzt | Ziel |
+|---|---:|---:|---:|
+| Fälle | 8 | **150** | 120–250 ✅ |
+| davon `bestaetigt` | 3 | 3 | – |
+| davon `vermutung` | 5 | 147 | – |
+| Fehlercode-Einträge | 52 | **74** | 200–500 ❌ |
+| Symptomklassen | 20 | 38 | – |
+| Sprachbrücken-Einträge | 17 | **40** | – |
+
+Der Zielkorridor für die **Fälle ist erreicht**. Der für die **Fehlercode-Einträge
+nicht** – und die Herstellerabdeckung ist schlechter geworden, nicht besser.
+
+## 9.2 Der Sammellauf brach nach 12 von 30 Zellen ab
+
+Nicht mangels Treffern: **das WebSearch-Kontingent der Session war mit 200 von 200
+Aufrufen erschöpft.** Die 18 nicht ausgeführten Zellen meldeten das ausdrücklich
+als Werkzeugausfall.
+
+Bitter ist, welche Zellen es traf. Die Reihenfolge war alphabetisch nach
+Herstellergruppe, und das Kontingent reichte bis Buderus. Ungefragt blieben:
+
+| Ausgefallene Zelle | Was dort fehlt |
+|---|---|
+| `bud-gb162`, `bud-u05x`, `bud-ems` | Buderus jenseits der GB172-Reihe |
+| `jun-cerapur`, `jun-cerastar`, `jun-condens`, `jun-druckdose` | **Junkers/Bosch — weiterhin 0 Fälle bei 15 erfassten Codes** |
+| `wolf-cgb2`, `wolf-cgb`, `wolf-mgk`, `wolf-codes` | **Wolf — weiterhin 0 Fälle bei 11 erfassten Codes** |
+| `sym-geraeusch`, `sym-geruch`, `sym-warmwass`, `sym-heizung`, `sym-start` | Gezielte Suche nach codelosen Sinnessymptomen |
+| `forum-vie`, `forum-breit` | Die Quelle mit der laut Vorlauf höchsten Trefferdichte |
+
+Damit sind exakt die vier Lücken offen geblieben, die der erste Durchlauf als
+vorrangig benannt hatte. Die Herstellerschieflage hat sich sogar verschärft:
+
+| Hersteller | Fälle | Anteil |
+|---|---:|---:|
+| Vaillant | 70 | 47 % |
+| Viessmann | 67 | 45 % |
+| Buderus | 13 | 9 % |
+| Junkers/Bosch | **0** | 0 % |
+| Wolf | **0** | 0 % |
+
+## 9.3 Warum kein neuer Fall `bestaetigt` trägt
+
+Alle 142 neuen Fälle tragen `vermutung`. Das ist keine Nachlässigkeit, sondern
+die einzige zulässige Einstufung: WebFetch ist für jede Domain blockiert, es
+wurde also nur das Suchergebnis ausgewertet — Titel, URL und eine maschinell
+erzeugte Zusammenfassung. Eine Lösungsbestätigung steht am Threadende und war
+nicht lesbar.
+
+Der Anteil belastbarer Fälle ist damit von 37,5 % auf **2 %** gefallen. In
+absoluten Zahlen hat sich nichts verbessert: es sind dieselben drei bestätigten
+Fälle wie vorher. Gemessen am Leitprinzip des Auftrags — belegte Fälle schlagen
+Menge — ist dieser Durchlauf ein Mengen-, kein Qualitätsgewinn.
+
+## 9.4 Wie mit der Suchzusammenfassung umgegangen wurde
+
+Der zweite Durchlauf hatte den Agenten verboten, die Zusammenfassung zu nutzen.
+Das war zu eng und der Grund für die damalige Nullausbeute. Für den Sammellauf
+galt eine abgestufte Regel:
+
+- **Starker Beleg: der Seitentitel.** Forenthread-Titel nennen sehr oft
+  Hersteller, Baureihe, Code und Kernsymptom.
+- **Schwacher Beleg: die Zusammenfassung.** Nutzbar für die Richtung einer
+  Ursache, nie als Tatsachenbehauptung.
+
+Der Anlass für diese Abstufung ist belegbar: in einer Testsuche zu einem
+Gasgerät schob die Zusammenfassung ein „Rückschlagventil hinter dem Öl" ein —
+sachlich unmöglich. Entsprechend steht in den neuen Fällen in
+`tatsaechliche_ursache` überwiegend „Nicht geklärt" mit ausdrücklich als
+ungesichert gekennzeichneter Richtungsangabe.
+
+Die Regeltreue der Agenten wurde nach dem Lauf maschinell geprüft:
+
+| Prüfung | Verstöße |
+|---|---:|
+| Regel 6 – `[Fachkraft]`-Präfix bei gas/strom | 0 |
+| Regel 6 – `fachkraft_erforderlich` bei gas/strom | 0 |
+| Regel 1 – Codebedeutung ohne Fehlercode | 0 |
+| Regel 2 – `symptom_laie` über 200 Zeichen | 0 |
+| Suchvorbehalt in `unsicherheiten` vermerkt | 0 fehlend |
+
+## 9.5 Wie die neuen Codes eingetragen wurden
+
+22 neue Codeknoten. Ihre `offizielle_bedeutung` steht durchgängig auf **null**,
+obwohl die Agenten Bedeutungen aus den Suchzusammenfassungen mitgeliefert haben.
+Diese Angaben stehen stattdessen im Feld `unsicherheiten`, ausdrücklich als
+ungesichert markiert.
+
+Das ist dieselbe Linie, die der erste Durchlauf für die vier Viessmann-Codes
+gewählt hat — und die der Recherchelauf des zweiten Durchlaufs unabhängig
+bestätigt hat. Eine aus einer Suchzusammenfassung stammende Bedeutung zur
+„offiziellen Bedeutung" zu erheben, wäre genau der Fehler, den der erste
+Durchlauf bei den Ratgeberportalen beschrieben hat.
+
+Zwei Codeangaben wurden dabei bereinigt: `A6 227` ist der im Bestand bereits
+dokumentierte Zifferndreher von `6A 227` und wurde normalisiert; `Eb` und `EB`
+sind Schreibvarianten desselben Viessmann-Codes.
+
+## 9.6 Schritt 5: Sprachbrücke von 17 auf 40 Einträge
+
+Die 18 neuen Symptomklassen aus dem Sammellauf waren zunächst über keine
+Laienschilderung erreichbar — der Validator meldete das als 18 Warnungen. Vier
+Agenten haben daraus 23 Brückeneinträge gebildet, **ohne jede weitere Suche**,
+allein aus den Laienschilderungen der gesammelten Fälle.
+
+Ein Vorbehalt steht dazu jetzt in `sprachbruecke.json`: die Schilderungen sind
+bereits Zusammenfassungen, nicht der Originalwortlaut der Nutzer. Die neuen
+Ausdrücke sind also plausible alltagssprachliche Fassungen, keine belegten
+Zitate.
+
+Neu abgedeckt sind unter anderem Warmwasserverhalten („beim Duschen wird das
+Wasser nach kurzer Zeit kalt"), Druckverhalten („Wasser muss ständig nachgefüllt
+werden"), Geräusche („es knallt, wenn der Brenner ausgeht") und Zeitbezüge
+(„seit der Wartung geht sie immer wieder auf Störung").
+
+## 9.7 Was jetzt zu tun ist
+
+1. **`CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION` anheben oder eine frische Session
+   starten.** Ohne das sind die 18 ausgefallenen Zellen nicht nachholbar. Sie
+   sind unverändert im Workflow-Skript hinterlegt und wieder ausführbar.
+2. **Junkers/Bosch und Wolf gezielt nachziehen** — 26 Codes ohne einen einzigen
+   Fall.
+3. **Umgebung mit freiem HTTP-Ausgang.** Bleibt Voraussetzung null: ohne sie
+   keine TDM-Prüfung und kein einziger neuer `bestaetigt`-Fall, egal wie viele
+   Suchen zur Verfügung stehen.
+4. **Die 142 neuen Fälle stichprobenartig gegen die Threads prüfen**, sobald
+   Seitenabruf möglich ist. Erst dann lässt sich sagen, wie viele davon zu
+   `bestaetigt` aufsteigen — und wie viele zu verwerfen sind.

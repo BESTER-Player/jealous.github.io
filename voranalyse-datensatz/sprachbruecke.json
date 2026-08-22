@@ -4,9 +4,10 @@
     "status": "Teilbestand aus den in dieser Sitzung gesichteten Beitraegen",
     "zweck": "Abbildung umgangssprachlicher Symptombeschreibungen auf technische Symptomklassen. Quelle sind alle gesichteten Beitraege, auch ungeloeste.",
     "belegzahl_bedeutung": "Anzahl der Beitraege, in denen der Ausdruck gesichtet wurde. Das ist die Beleghaeufigkeit des WORTES und ausdruecklich keine Aussage ueber die Haeufigkeit der dahinterliegenden Ursache (Regel 4).",
-    "eintraege_gesamt": 17,
+    "eintraege_gesamt": 40,
     "ziel_art": "Achse der Zielklasse in fehlercode_taxonomie.json. Nur ziel_art='leitsymptom' ist Ziel einer Laieneingabe; die uebrigen Achsen dienen der Normalisierung, der Kontextauswertung oder der Fachkraftseite.",
-    "gefahrenkategorie": "Von der Zielklasse geerbt, nicht am Eintrag gepflegt. Laesst sich kein Ziel aufloesen, ist konservativ wie 'gas' zu verfahren (Regel 8)."
+    "gefahrenkategorie": "Von der Zielklasse geerbt, nicht am Eintrag gepflegt. Laesst sich kein Ziel aufloesen, ist konservativ wie 'gas' zu verfahren (Regel 8).",
+    "herkunft_neue_eintraege": "Die am 22.08.2026 ergaenzten Eintraege wurden aus den Laienschilderungen der im Sammellauf erfassten Faelle zurueckuebersetzt. Diese Schilderungen sind bereits Zusammenfassungen, nicht der Originalwortlaut der Nutzer - der Ausdruck ist deshalb eine plausible alltagssprachliche Fassung, kein belegtes Zitat."
   },
   "eintraege": [
     {
@@ -251,6 +252,383 @@
       "anmerkung": "Der Betreiber gibt den Buderus-Code durchgaengig vertauscht an. Fuer die Eingabe-Normalisierung relevant: Code-Erkennung muss Zifferndreher und Schreibvarianten abfangen.",
       "ziel_art": "eingabenormalisierung",
       "gefahrenkategorie": "keine",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "ich fuelle Wasser nach, aber der Druck geht nicht hoch",
+      "varianten": [
+        "ich fuelle nach und die Anzeige bleibt gleich",
+        "trotz Nachfuellen zeigt das Geraet keinen hoeheren Druck"
+      ],
+      "symptomklasse": "kein_druckanstieg_beim_pumpenstart",
+      "sinneskanal": "optisch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "druckverlust_im_heizkreis",
+        "meldung_wassermangel"
+      ],
+      "anmerkung": "Abgrenzung: hier steigt der Druck beim Nachfuellen gar nicht erst an; beim Druckverlust im Heizkreis steigt er zwar, faellt aber spaeter wieder ab. Das Material beschreibt ausschliesslich das Nachfuellen, nicht ausdruecklich den Pumpenstart.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "Wasser muss staendig nachgefuellt werden, sonst bleibt die Heizung stehen",
+      "varianten": [
+        "alle paar Wochen ist der Druck weg",
+        "der Druck faellt schon nach Stunden wieder ab",
+        "der Druck faellt langsam ab, ein Leck sieht man nirgends"
+      ],
+      "symptomklasse": "druckverlust_im_heizkreis",
+      "sinneskanal": "verhalten",
+      "belegzahl": 5,
+      "mehrdeutig_zu": [
+        "meldung_wassermangel",
+        "kein_druckanstieg_beim_pumpenstart"
+      ],
+      "anmerkung": "Die Zeitangaben im Material reichen von Stunden bis mehrere Wochen; das ist eine Beschreibung des Ablaufs, keine Aussage ueber Haeufigkeit. Eine Schilderung nennt zusaetzlich, dass die Druckanzeige verzoegert reagiert - dann kann der Eindruck auch von der Anzeige selbst kommen.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es tropft dauernd Wasser aus einer Leitung",
+      "varianten": [],
+      "symptomklasse": "druckverlust_im_heizkreis",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "wasser_in_der_brennkammer"
+      ],
+      "anmerkung": "Sichtbares Tropfen aussen an einer Leitung, nicht Wasser innen im Geraet. Im Material zusammen mit schnellem Druckabfall geschildert.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "die Heizung meldet, dass zu wenig Wasser drin ist",
+      "varianten": [],
+      "symptomklasse": "meldung_wassermangel",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "druckverlust_im_heizkreis",
+        "kein_druckanstieg_beim_pumpenstart"
+      ],
+      "anmerkung": "Der Laie berichtet nur die Meldung selbst, ohne Fehlercode und ohne eigene Beobachtung am Druck. Ob tatsaechlich Druck fehlt, geht aus dem Material nicht hervor.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "das Bedienteil und die Therme reden nicht mehr miteinander",
+      "varianten": [
+        "es kommt eine Meldung, dass die Verbindung zum Bedienteil fehlt",
+        "eine Meldung sagt, das Zusatzteil wird nicht mehr gefunden"
+      ],
+      "symptomklasse": "kommunikationsstoerung_regler",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "bedienung_gesperrt",
+        "zeitprogramm_wird_nicht_umgesetzt"
+      ],
+      "anmerkung": "Abgrenzung: hier meldet das Geraet selbst eine fehlende Verbindung. Wenn nur Eingaben nicht angenommen werden oder Schaltzeiten nicht greifen, ohne dass eine Verbindungsmeldung kommt, passt eine andere Klasse besser.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "strom",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "innen im Geraet steht Wasser, da wo die Flamme brennt",
+      "varianten": [],
+      "symptomklasse": "wasser_in_der_brennkammer",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "druckverlust_im_heizkreis"
+      ],
+      "anmerkung": "Wasser innerhalb des Geraets, das der Laie beim Hineinschauen sieht - nicht ein Tropfen oder eine Pfuetze an einer Leitung ausserhalb.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es kommt kein warmes Wasser mehr, geheizt wird aber",
+      "varianten": [
+        "Warmwasser kommt gar nicht mehr, die Heizung laeuft normal",
+        "am Speichergeraet bleibt das warme Wasser aus"
+      ],
+      "symptomklasse": "warmwasser_bleibt_aus",
+      "sinneskanal": "verhalten",
+      "belegzahl": 3,
+      "mehrdeutig_zu": [
+        "warmwasser_zu_geringer_volumenstrom",
+        "warmwasser_temperatur_schwankt"
+      ],
+      "anmerkung": "Abgrenzung: es kommt gar kein warmes Wasser, waehrend der Heizbetrieb weiterlaeuft - nicht nur wenig oder schwankend warmes Wasser. Eine weitere Schilderung im Material knuepft das Ausbleiben an einen vorangegangenen Tausch der Regelung an und ist eher unter stoerung_nach_wartung zu fuehren.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "beim ersten Aufdrehen kommt warmes Wasser, beim zweiten Mal nicht mehr",
+      "varianten": [],
+      "symptomklasse": "warmwasser_bleibt_aus",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "warmwasser_temperatur_schwankt"
+      ],
+      "anmerkung": "Das Warmwasser setzt einmal ein und bleibt beim naechsten Zapfen aus. Nur ein Beleg im Material.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "aus allen Haehnen kommt nur noch wenig warmes Wasser",
+      "varianten": [
+        "es kommt wenig und ist auch nicht richtig heiss"
+      ],
+      "symptomklasse": "warmwasser_zu_geringer_volumenstrom",
+      "sinneskanal": "haptisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "warmwasser_bleibt_aus",
+        "warmwasser_temperatur_schwankt"
+      ],
+      "anmerkung": "Kennzeichen ist, dass es alle Zapfstellen zugleich betrifft und nicht nur einen einzelnen Hahn. Die im selben Beleg genannte zu geringe Temperatur ist hier Begleitangabe, nicht das Leitsymptom.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "der Brenner geht erst an, wenn man den Hahn ganz aufdreht",
+      "varianten": [
+        "bei normalem Aufdrehen tut sich nichts"
+      ],
+      "symptomklasse": "warmwasser_zu_geringer_volumenstrom",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "warmwasser_bleibt_aus"
+      ],
+      "anmerkung": "Der Laie beschreibt, dass erst weites Aufdrehen die Warmwasserbereitung ausloest. Bei normalem Aufdrehen wirkt es wie ein Ausbleiben des Warmwassers, daher die Nachbarschaft zu warmwasser_bleibt_aus.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "beim Duschen wird das Wasser nach kurzer Zeit kalt",
+      "varianten": [
+        "erst ist es heiss, dann faellt die Temperatur beim Zapfen ab",
+        "das warme Wasser wird waehrend des Duschens kalt"
+      ],
+      "symptomklasse": "warmwasser_temperatur_schwankt",
+      "sinneskanal": "haptisch",
+      "belegzahl": 3,
+      "mehrdeutig_zu": [
+        "warmwasser_bleibt_aus",
+        "warmwasser_zu_geringer_volumenstrom"
+      ],
+      "anmerkung": "Abgrenzung: warmes Wasser kommt zunaechst und faellt waehrend der Zapfung ab - im Unterschied zum vollstaendigen Ausbleiben.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es dauert ewig, bis wieder warmes Wasser kommt",
+      "varianten": [
+        "es dauert lange, bis wieder warmes Wasser da ist"
+      ],
+      "symptomklasse": "warmwasser_temperatur_schwankt",
+      "sinneskanal": "verhalten",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "warmwasser_bleibt_aus"
+      ],
+      "anmerkung": "Im Material immer zusammen mit dem Temperaturabfall beim Zapfen genannt; als eigener Ausdruck erfasst er nur den Zeitverzug bis zum erneuten Warmwasser.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es knarrt und rattert, wenn sie von Heizung auf Warmwasser umschaltet",
+      "varianten": [
+        "beim Umschalten brummt das Geraet"
+      ],
+      "symptomklasse": "geraeusch_beim_umschalten",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "geraeusch_stroemung"
+      ],
+      "anmerkung": "Abgrenzung zu geraeusch_stroemung: das Geraeusch ist an den Wechsel der Betriebsart gebunden, nicht an laufendes Wasser. Brummen kommt im Material in beiden Klassen vor und trennt allein nicht.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "wenn warmes Wasser laeuft, rauscht es laut im Geraet",
+      "varianten": [
+        "die Therme ist deutlich lauter geworden und rauscht"
+      ],
+      "symptomklasse": "geraeusch_stroemung",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 2,
+      "mehrdeutig_zu": [
+        "geraeusch_beim_umschalten",
+        "warmwasser_zu_geringer_volumenstrom"
+      ],
+      "anmerkung": "Rauschen waehrend des Betriebs beziehungsweise der Zapfung, nicht auf den Moment des Umschaltens begrenzt.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "es knallt, wenn der Brenner ausgeht",
+      "varianten": [
+        "jedes Mal beim Ausschalten gibt es einen Knall"
+      ],
+      "symptomklasse": "verpuffung_beim_abschalten",
+      "sinneskanal": "geraeusch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "geraeusch_beim_umschalten"
+      ],
+      "anmerkung": "Der Knall faellt hier ausdruecklich mit dem Ausgehen des Brenners zusammen; ein Klacken oder Schlagen beim Wechsel zwischen Heizen und Warmwasser gehoert nicht hierher.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "der Druck steigt von allein an, obwohl keiner Wasser nachgefuellt hat",
+      "varianten": [
+        "der Zeiger geht immer weiter hoch, ohne dass jemand etwas gemacht hat"
+      ],
+      "symptomklasse": "druckanstieg_ohne_nachspeisung",
+      "sinneskanal": "optisch",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [],
+      "anmerkung": "Laien lesen das am Manometer ab; wichtig ist die ausdrueckliche Angabe, dass nicht nachgefuellt wurde.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "der Brenner laeuft fast durchgehend, ohne dass eine Stoerung kommt",
+      "varianten": [
+        "die Heizung geht kaum noch aus"
+      ],
+      "symptomklasse": "dauerbetrieb_ohne_modulation",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "zeitprogramm_wird_nicht_umgesetzt",
+        "takten_kurze_brennerlaufzeit"
+      ],
+      "anmerkung": "Abgrenzung: hier laeuft der Brenner lang durch, beim Takten laeuft er nur kurz und geht dann wieder aus. Zum Zeitprogramm abzugrenzen, wenn der Dauerlauf nur ausserhalb der eingestellten Zeiten auffaellt.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "die Heizung haelt sich nicht an die eingestellten Zeiten",
+      "varianten": [
+        "im Sommer laeuft sie zu Zeiten, die gar nicht eingestellt sind"
+      ],
+      "symptomklasse": "zeitprogramm_wird_nicht_umgesetzt",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "dauerbetrieb_ohne_modulation",
+        "bedienung_gesperrt"
+      ],
+      "anmerkung": "Im Material auf den Sommerbetrieb bezogen. Abzugrenzen von der Schilderung, dass sich am Geraet gar nichts mehr einstellen laesst.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "strom",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "die Heizung schaltet staendig ein und aus, immer nur ganz kurz",
+      "varianten": [
+        "der Brenner geht nach ein paar Minuten schon wieder aus",
+        "bei der Fussbodenheizung ist die gewuenschte Temperatur sofort da und der Brenner geht gleich wieder aus"
+      ],
+      "symptomklasse": "takten_kurze_brennerlaufzeit",
+      "sinneskanal": "verhalten",
+      "belegzahl": 3,
+      "mehrdeutig_zu": [
+        "dauerbetrieb_ohne_modulation",
+        "uebertemperatur_abschaltung"
+      ],
+      "anmerkung": "Kennzeichnend ist die kurze Laufzeit ohne Stoermeldung; wird eine Abschaltung mit Stoerung wegen zu hoher Temperatur geschildert, gehoert das nicht hierher.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "am Bedienteil kann man nichts mehr einstellen",
+      "varianten": [
+        "es reagiert nicht mehr, wenn man was drueckt",
+        "die Anzeige laesst sich nicht mehr bedienen"
+      ],
+      "symptomklasse": "bedienung_gesperrt",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "kommunikationsstoerung_regler",
+        "zeitprogramm_wird_nicht_umgesetzt"
+      ],
+      "anmerkung": "Hier reagiert das Bedienteil ueberhaupt nicht auf Eingaben. Abzugrenzen davon, dass sich zwar etwas einstellen laesst, die Einstellung aber nicht umgesetzt wird.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "strom",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "sie wird zu heiss und schaltet sich ab",
+      "varianten": [
+        "beim Einstellen wird sie zu heiss und geht aus"
+      ],
+      "symptomklasse": "uebertemperatur_abschaltung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "takten_kurze_brennerlaufzeit",
+        "stoerung_nach_wartung"
+      ],
+      "anmerkung": "Im Vordergrund steht die zu hohe Temperatur als Grund fuer das Abschalten, nicht ein blosses kurzes Ein- und Ausgehen. Das Material nennt als Zeitpunkt das Einstellen am Geraet, was auch nach einem Technikertermin liegen kann.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "seit der Wartung geht sie immer wieder auf Stoerung",
+      "varianten": [],
+      "symptomklasse": "stoerung_nach_wartung",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "fruehausfall"
+      ],
+      "anmerkung": "Der Ausdruck beschreibt nur den zeitlichen Zusammenhang mit der Wartung, nicht die Art der Stoerung selbst; diese kann jeder anderen Klasse entsprechen. Abzugrenzen vom reinen Bezug auf ein neues Geraet.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
+    },
+    {
+      "ausdruck": "das Geraet ist erst ein paar Monate alt und hat schon eine Stoerung",
+      "varianten": [
+        "die Heizung ist noch neu und geht schon auf Stoerung"
+      ],
+      "symptomklasse": "fruehausfall",
+      "sinneskanal": "verhalten",
+      "belegzahl": 1,
+      "mehrdeutig_zu": [
+        "stoerung_nach_wartung"
+      ],
+      "anmerkung": "Reiner Zeitbezug zum Einbau des Geraets, keine Beschreibung der Stoerung selbst. Abzugrenzen vom Zeitbezug zu einem Wartungstermin.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
       "zusatzziele": []
     }
   ]

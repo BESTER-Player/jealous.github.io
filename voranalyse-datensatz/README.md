@@ -3,14 +3,17 @@
 Datengrundlage für die KI-Voranalyse von Handwerks-Serviceanfragen.
 Gerätetyp: Gas-Brennwerttherme.
 
-**Stand 22.08.2026, zweiter Durchlauf: 8 Fälle, 52 Codes, 20 Symptomklassen,
-17 Sprachbrücken-Einträge.** Der Zielumfang (120–250 Fälle) ist deutlich
-verfehlt – warum und was daraus folgt, steht in `report.md`. Nichts ist mit
-Plausiblem aufgefüllt.
+**Stand 22.08.2026, dritter Durchlauf: 150 Fälle, 74 Codes, 38 Symptomklassen,
+40 Sprachbrücken-Einträge.**
 
-Der zweite Durchlauf hat den Bestand geprüft statt ihn zu vergrößern: 15 Agenten,
-36 konsolidierte Befunde (`audit_befunde.md`), 10 davon umgesetzt. Die Recherche
-hat **nichts Eintragbares** erbracht – begründet in `report.md`, Abschnitt 8.2.
+Der Zielkorridor für die Fälle (120–250) ist erreicht, der für die
+Fehlercode-Einträge (200–500) nicht. Der Sammellauf brach nach 12 von 30
+Suchzellen ab, weil das WebSearch-Kontingent der Session erschöpft war –
+**Junkers/Bosch und Wolf haben deshalb weiterhin null Fälle** bei 26 erfassten
+Codes. Einzelheiten in `report.md`, Abschnitt 9.
+
+Vorgeschichte: Durchlauf 1 sammelte 8 Fälle; Durchlauf 2 prüfte den Bestand
+(15 Agenten, 36 Befunde in `audit_befunde.md`, 10 umgesetzt).
 
 Drei Punkte vor der Weiterverwendung:
 - Die **TDM-Prüfung nach §44b UrhG ist nicht erfolgt und in dieser Umgebung auch
@@ -19,7 +22,9 @@ Drei Punkte vor der Weiterverwendung:
   verwendbar.
 - Der Grad **`bestaetigt` ist ohne Seitenabruf nicht vergebbar**, weil die
   Lösungsbestätigung am Threadende steht und der Suchauszug davor abbricht.
-  Neu erhobene Fälle erreichen höchstens `vermutung`.
+  **Alle 142 im dritten Durchlauf ergänzten Fälle tragen deshalb `vermutung`.**
+  Der Anteil belastbarer Fälle liegt bei 2 % (3 von 150) – in absoluten Zahlen
+  unverändert gegenüber dem Stand vor dem Sammellauf.
 - Der **Eval-Split ist weiterhin nicht gezogen** (siehe `split_log.md`); nach den
   Herabstufungen des zweiten Durchlaufs stehen noch 3 bestätigte Fälle.
 

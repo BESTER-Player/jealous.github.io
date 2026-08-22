@@ -85,3 +85,49 @@ Vollständige Herstellertabellen wurden nicht übernommen. Einzelne Codes sind
 Fakten, die Liste als Ganzes kann als Datenbank nach §87a ff. UrhG geschützt
 sein. Aufgenommen wurden Codes, die einen Fall verankern, sowie Codes aus
 denselben Codegruppen – alle in eigener Formulierung.
+
+---
+
+## Nachtrag 22.08.2026: Sammellauf, zweiter Durchlauf
+
+30 Suchzellen über Hersteller, Baureihen, Fehlercodes und codelose Symptome.
+**Nur 12 Zellen kamen zur Ausführung** – danach war das WebSearch-Kontingent der
+Session mit 200 von 200 Aufrufen erschöpft. Die 18 übrigen Zellen meldeten
+ausdrücklich einen Werkzeugausfall, keinen leeren Suchraum. Betroffen sind genau
+die Lücken, die der erste Durchlauf als vorrangig benannt hatte: Junkers/Bosch,
+Wolf und die codelosen Sinnessymptome.
+
+Für den TDM-Status ändert sich nichts: er bleibt für **alle** Quellen ungeprüft,
+weil der Abruf von robots.txt weiterhin am Egress-Proxy scheitert.
+
+### Quellen des Sammellaufs, nach Zahl der daraus aufgenommenen Fälle
+
+| Domain | Fälle | TDM-Status |
+|---|---:|---|
+| www.heizungsforum.de | 66 | ungeprüft |
+| community.viessmann.de | 53 | ungeprüft |
+| www.haustechnikdialog.de | 16 | ungeprüft |
+| www.diynot.com | 5 | ungeprüft |
+| community.screwfix.com | 3 | ungeprüft |
+| www.viessmann-community.com | 2 | ungeprüft |
+| www.elektroda.com | 1 | ungeprüft |
+| forums.moneysavingexpert.com | 1 | ungeprüft |
+| www.heizungfehlermeldung.de | 1 | ungeprüft |
+| www.fehlerhelfen.de | 1 | ungeprüft |
+| www.pleasantplumbers.com | 1 | ungeprüft |
+
+Die englischsprachigen Quellen (diynot.com, screwfix.com, moneysavingexpert.com,
+pleasantplumbers.com, elektroda.com) betreffen 11 Fälle und stehen im Rahmen der
+Auftragsvorgabe „Englisch nur ergänzend". Sie beziehen sich auf UK-Varianten von
+Vaillant- und Viessmann-Geräten; ob die Baureihenbezeichnungen deckungsgleich mit
+dem deutschen Markt sind, ist **nicht geprüft** und in den betroffenen Fällen als
+Unsicherheit vermerkt.
+
+### Was der Sammellauf ausgeschlossen hat
+
+| Ausgeschlossen | Grund |
+|---|---|
+| 5 Kandidaten mit bereits erfasster Quell-URL | Dublette, derselbe Thread |
+| 1 Kandidat zur Ersatzteil-Kompatibilität (Drucksensor orange gegen schwarz) | Kein Leitsymptom, keine Störungsschilderung – für die Voranalyse wertlos |
+| 1 Codeangabe „F.62 und F.63" | Zwei Codes in einem Feld sind kein Code. Feld auf null, Aufzählung in `unsicherheiten` (Regel 1) |
+| Alle Angaben zu Manipulationen an Schutzeinrichtungen | Vorgabe des Sammelauftrags, wie im ersten Durchlauf |

@@ -4,8 +4,8 @@
     "status": "Teilbestand - bewusst keine vollstaendigen Herstellertabellen",
     "auswahlregel": "Aufgenommen wurden Codes, die einen Fall in faelle.jsonl verankern, sowie Codes aus denselben Codegruppen. Vollstaendige Codelisten der Hersteller wurden NICHT uebernommen: einzelne Codes sind Fakten, die Liste als Ganzes kann als Datenbank nach §87a ff. UrhG geschuetzt sein. Konservative Wahl nach Regel 8.",
     "hinweis": "Bedeutungen sind eigene Formulierungen, keine Uebernahme von Tabellenzeilen. Wo 'offizielle_bedeutung' null ist, war die Bedeutung nicht belastbar zu belegen - nicht mit Plausiblem auffuellen.",
-    "codes_gesamt": 52,
-    "symptomklassen_gesamt": 20,
+    "codes_gesamt": 74,
+    "symptomklassen_gesamt": 38,
     "achsen": {
       "leitsymptom": "Beobachtbares Symptom, Ziel der Laieneingabe.",
       "fallmerkmal": "Merkmal des Fallverlaufs, kein Symptom.",
@@ -21,12 +21,23 @@
       "offizielle_bedeutung": "Trockenbrand bzw. Wassermangel im Geraet",
       "betroffene_baureihen": [
         "ecoTEC",
-        "atmoTEC"
+        "atmoTEC",
+        "atmoTEC classic",
+        "atmoTEC plus",
+        "ecoCOMPACT VSC 196-C 150",
+        "ecoTEC plus"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0002",
+        "VAI-0003",
+        "VAI-0004",
+        "VAI-0005",
+        "VAI-0006",
+        "VAI-0010"
+      ],
       "unsicherheiten": "Abgrenzung zu F.75: F.22 meldet zu wenig Wasser, F.75 den fehlenden Druckanstieg.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -35,11 +46,19 @@
       "hersteller": "Vaillant",
       "code": "F.27",
       "offizielle_bedeutung": "Flammenvortaeuschung - Flammensignal ohne angeforderte Verbrennung",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC plus",
+        "ecoTEC plus VC PL306/3-5",
+        "VC 194/2 XE-C-HL"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0019",
+        "VAI-0020",
+        "VAI-0023"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -51,12 +70,21 @@
       "betroffene_baureihen": [
         "ecoTEC pro",
         "ecoTEC plus",
-        "Turbomax"
+        "Turbomax",
+        "ecoTEC plus VC DE 146/5-5 R2",
+        "ecoTEC plus VC DE 206/5-5 R5",
+        "VCW 204/2 XE-H",
+        "atmoTEC plus"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0015",
+        "VAI-0018",
+        "VAI-0024",
+        "VAI-0062"
+      ],
       "unsicherheiten": "Mehrere Ratgeberseiten beschreiben F.28 faelschlich als Flammenausfall im Betrieb - das ist F.29.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -65,11 +93,17 @@
       "hersteller": "Vaillant",
       "code": "F.29",
       "offizielle_bedeutung": "Ausfall im Betrieb: Flamme erlischt, erneute Zuendung erfolglos",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC plus 206/5-5 R5",
+        "ecoTEC VCW"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0017",
+        "VAI-0021"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -78,11 +112,19 @@
       "hersteller": "Vaillant",
       "code": "F.32",
       "offizielle_bedeutung": "Fehler Geblaese",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "VC 195/2 E-C",
+        "VC 166",
+        "turboTEC VC 205 E"
+      ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0036",
+        "VAI-0037",
+        "VAI-0038"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -91,11 +133,15 @@
       "hersteller": "Vaillant",
       "code": "F.49",
       "offizielle_bedeutung": "Fehler eBUS",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC exclusive"
+      ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0027"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -104,11 +150,17 @@
       "hersteller": "Vaillant",
       "code": "F.62",
       "offizielle_bedeutung": "Fehler Brennstoffventil, Abschaltverzoegerung",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC plus VC DE 126/3-5",
+        "ecoCOMPACT VCC 266"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0031",
+        "VAI-0032"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -143,11 +195,15 @@
       "hersteller": "Vaillant",
       "code": "F.72",
       "offizielle_bedeutung": "Temperaturdifferenz zwischen Vorlauf- und Ruecklauffuehler zu gross",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "atmoTEC plus"
+      ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0013"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -156,11 +212,15 @@
       "hersteller": "Vaillant",
       "code": "F.73",
       "offizielle_bedeutung": "Fehler Wasserdrucksensor",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC pro"
+      ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0040"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -172,13 +232,24 @@
       "betroffene_baureihen": [
         "ecoTEC plus",
         "ecoTEC pro",
-        "atmoTEC"
+        "atmoTEC",
+        "ecoTEC pro 28",
+        "ecoTEC plus 824",
+        "ecoTEC plus 831",
+        "ecoTEC 831",
+        "ecoTEC (Variante im Titel nicht praezisiert)"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
       "quelle_datum": null,
       "fall_ids": [
-        "VAI-0001"
+        "VAI-0001",
+        "VAI-0041",
+        "VAI-0042",
+        "VAI-0043",
+        "VAI-0044",
+        "VAI-0046",
+        "VAI-0047"
       ],
       "unsicherheiten": "Bewertet wird der Druckanstieg beim Pumpenstart, nicht der absolute Anlagendruck. In Ratgeberquellen wird der Code haeufig als 'Wasserdruck zu niedrig' wiedergegeben - siehe Musterabweichung M1 im Report.",
       "code_typ": "basiscode",
@@ -188,11 +259,17 @@
       "hersteller": "Vaillant",
       "code": "F.77",
       "offizielle_bedeutung": "Fehler Abgasklappe oder Kondensatpumpe",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC plus VC 306/3-5",
+        "ecoTEC plus VC 196/3-5"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0052",
+        "VAI-0053"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -201,11 +278,15 @@
       "hersteller": "Vaillant",
       "code": "F.92",
       "offizielle_bedeutung": "Falsche Gasart erkannt",
-      "betroffene_baureihen": [],
+      "betroffene_baureihen": [
+        "ecoTEC plus"
+      ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0049"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -228,12 +309,17 @@
       "code": "E3",
       "offizielle_bedeutung": "Zu geringe Waermeabnahme waehrend des Kalibrierens, dadurch Uebertemperatur und Verriegelung",
       "betroffene_baureihen": [
-        "Vitodens 200-W"
+        "Vitodens 200-W",
+        "Vitodens 200"
       ],
       "gefahrenkategorie": "wasser",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Stoerung-Vitodens-200-W/td-p/19369",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VIE-0055",
+        "VIE-0056",
+        "VIE-0057"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -243,13 +329,20 @@
       "code": "E8",
       "offizielle_bedeutung": "Ionisationsstrom ausserhalb des gueltigen Bereichs",
       "betroffene_baureihen": [
-        "Vitodens 200"
+        "Vitodens 200",
+        "Vitodens 200-W (B2HA)",
+        "Vitodens 200-W",
+        "Vitodens 300-W"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Fehler-E8/td-p/409849",
       "quelle_datum": null,
       "fall_ids": [
-        "VIE-0005"
+        "VIE-0005",
+        "VIE-0020",
+        "VIE-0059",
+        "VIE-0060",
+        "VIE-0061"
       ],
       "unsicherheiten": "Im Thread ausdruecklich als weitlaeufiger Code ohne spezifische Einzelursache beschrieben - Spannweite von der Elektrode bis zur Abgasanlage.",
       "code_typ": "basiscode",
@@ -261,13 +354,20 @@
       "offizielle_bedeutung": null,
       "betroffene_baureihen": [
         "Vitodens 200",
-        "Vitodens 200 WB2A"
+        "Vitodens 200 WB2A",
+        "Vitodens 200 (WB2A), Kombigerät",
+        "Vitodens 200 (WB2A)"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.thermenwartung-kundendienst.at/thermen-marken-support/loeblich-viessmann-thermen-support-wien/viessmann-fehler-f5-abgasgeblaese-loesung.html",
       "quelle_datum": null,
       "fall_ids": [
-        "VIE-0001"
+        "VIE-0001",
+        "VIE-0006",
+        "VIE-0007",
+        "VIE-0008",
+        "VIE-0009",
+        "VIE-0010"
       ],
       "unsicherheiten": "Bedeutung nicht gegen Herstellerdokumentation verifiziert. Betreiber fuehren den Code als Feuerungsautomat-Stoerung, eine Fachbetriebsquelle beschreibt ihn als Geblaese- bzw. fehlenden Differenzdruck beim Brennerstart. Nicht befuellen, bis die Serviceanleitung der Baureihe vorliegt.",
       "code_typ": "basiscode",
@@ -278,13 +378,16 @@
       "code": "FD",
       "offizielle_bedeutung": null,
       "betroffene_baureihen": [
-        "Vitodens 200-W"
+        "Vitodens 200-W",
+        "Vitodens 200-W (WB2C)"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Stoerung-Feuerungsautomat-FD-nur-bei-geschlossene/td-p/606913",
       "quelle_datum": null,
       "fall_ids": [
-        "VIE-0002"
+        "VIE-0002",
+        "VIE-0011",
+        "VIE-0012"
       ],
       "unsicherheiten": "Wird im Display als Feuerungsautomat-Stoerung gefuehrt. Exakte Bedeutung nicht gegen Herstellerdokumentation verifiziert.",
       "code_typ": "basiscode",
@@ -295,13 +398,20 @@
       "code": "FE",
       "offizielle_bedeutung": null,
       "betroffene_baureihen": [
-        "Vitodens 200"
+        "Vitodens 200",
+        "Vitodens 200-W (WB2C)",
+        "Vitodens 300-W",
+        "Vitodens 333-F"
       ],
       "gefahrenkategorie": "strom",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-staendig-Stoerung-FE/td-p/128218",
       "quelle_datum": null,
       "fall_ids": [
-        "VIE-0004"
+        "VIE-0004",
+        "VIE-0017",
+        "VIE-0018",
+        "VIE-0035",
+        "VIE-0038"
       ],
       "unsicherheiten": "Bedeutung nicht verifiziert.",
       "code_typ": "basiscode",
@@ -313,12 +423,20 @@
       "offizielle_bedeutung": null,
       "betroffene_baureihen": [
         "Vitodens 200",
-        "Vitodens 300"
+        "Vitodens 300",
+        "Vitodens 200-W",
+        "Vitodens 200-W (B2HA)",
+        "Vitodens 300-W"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Stoerung-Feuerungsautomat-FD-nur-bei-geschlossene/td-p/606913",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "VIE-0013",
+        "VIE-0014",
+        "VIE-0022",
+        "VIE-0034"
+      ],
       "unsicherheiten": "Bedeutung nicht verifiziert. In Threads regelmaessig gemeinsam mit EB und FE genannt; Viessmann-Codes sind baureihen- und reglergenerationsabhaengig.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -329,12 +447,15 @@
       "offizielle_bedeutung": "Blockierende Stoerung: Zuendversuch misslungen. Nach dem vierten erfolglosen Versuch geht sie in eine verriegelnde Stoerung ueber.",
       "betroffene_baureihen": [
         "Logamax plus GB172",
-        "Logamax plus GB172 T"
+        "Logamax plus GB172 T",
+        "Logamax plus GB172-20"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.manualslib.de/manual/120641/Buderus-Logamax-Plus-Gb172-T.html?page=43",
       "quelle_datum": null,
-      "fall_ids": [],
+      "fall_ids": [
+        "BUD-0003"
+      ],
       "unsicherheiten": null,
       "code_typ": "basiscode",
       "gehoert_zu_code": null
@@ -346,14 +467,18 @@
       "betroffene_baureihen": [
         "Logamax plus GB152",
         "Logamax plus GB172",
-        "Logamax U154"
+        "Logamax U154",
+        "Logamax plus GB172-24K",
+        "Logamax plus GB172-24"
       ],
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.ersatzteile-koeln.de/buderus-fehlermeldung-ems-steuerung/stoerung-6/fehlercode-6a-xxx/fehlermeldung-6a227.php",
       "quelle_datum": null,
       "fall_ids": [
         "BUD-0001",
-        "BUD-0002"
+        "BUD-0002",
+        "BUD-0004",
+        "BUD-0005"
       ],
       "unsicherheiten": null,
       "code_typ": "zusatzcode",
@@ -750,6 +875,411 @@
       "unsicherheiten": "Nur aus einer Ratgeberquelle.",
       "code_typ": "basiscode",
       "gehoert_zu_code": null
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.24",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoCOMPACT VSC196",
+        "ecoTEC plus"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/vaillant-ecocompact-vsc196-f24-wie-weiter.3527/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0007",
+        "VAI-0008"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Temperaturanstieg im Waermetauscher zu schnell bei zu geringer Wasserumwaelzung."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.25",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoCOMPACT VSC196-C150"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/ecocompact-vsc196-c150-permanente-fehlermeldung-f25.22823/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0009"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Sicherheitsabschaltung wegen Uebertemperatur bzw. zu hoher Abgastemperatur."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.61",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoTEC plus VC DE 126/3-5",
+        "VSC 196/3-5 / 150"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/176501/Fehler-F-61-bei-Vaillant-Ecotec-plus-VC-DE-126-3-5",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0029",
+        "VAI-0030"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Fehler Gasventil-Ansteuerung: Kurzschluss oder Masseschluss im Kabelbaum zum Gasventil, defektes Gasventil (Kurz-/Masseschluss der Spulen) oder defekte Elektronik (laut Vaillant-Fehlercodeliste)."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.64",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoTEC classic VC 196/2-C",
+        "VSC 126-140",
+        "VSC 196-C 150"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/177823/Fehler-F64-Vaillant-ecotec-classic-vc-196-2-c",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0033",
+        "VAI-0034",
+        "VAI-0035"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Elektronik-/Fuehlerfehler: Kurzschluss am Vorlauf- oder Ruecklauffuehler bzw. defekte Leiterplatte (laut Vaillant-Fehlercodeliste)."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.70",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoTEC exclusiv (VC 206/2-E)"
+      ],
+      "gefahrenkategorie": "wasser",
+      "quelle_url": "https://www.heizungsforum.de/threads/vaillant-ecotec-exclusiv-vc-206-2-e-fehler-f-70-wasserdruck-geloest.18106/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0039"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Laut Herstellerdokumentation steht F.70 fuer eine ungueltige Geraetekennung (DSN); diese Zuordnung ist im vorliegenden Suchergebnis nicht bestaetigt."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.83",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoTEC plus 430"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.diynot.com/diy/threads/vaillant-ecotec-plus-430-f83-error-code.495145/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0051"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Nach Vaillant-Unterlagen: Temperaturaenderung an Vorlauf-/Ruecklauffuehler beim Brennerstart zu gering; in Fehlerlisten teils als zu niedrige Vorlauftemperatur wiedergegeben."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.84",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "ecoTEC plus"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.pleasantplumbers.com/vaillant-ecotec-plus-f84-error-code-temperature-difference-fault-explained",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0054"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Nach Vaillant-Fehlercodelisten: NTC-Temperaturdifferenz unplausibel."
+    },
+    {
+      "hersteller": "Vaillant",
+      "code": "F.20",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "atmoTEC plus"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotec-plus-kein-warmwasser.37458/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VAI-0061"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Sicherheitsabschaltung durch den Sicherheitstemperaturbegrenzer wegen Uebertemperatur im Heizkreis."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "EB",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 200",
+        "Vitodens 200-W"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-Feuerungsautomat-EB/td-p/413870",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0015",
+        "VIE-0016",
+        "VIE-0021"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Wiederholter Flammenverlust waehrend des Kalibrierens (Wortlaut nur aus der Zusammenfassung, nicht gegen die Herstellerdokumentation geprueft)."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "F2",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 200-W",
+        "Vitodens 200-W (Typangabe laut Titel W2BA)",
+        "Vitodens 300-W",
+        "Vitodens 100-W"
+      ],
+      "gefahrenkategorie": "wasser",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Fehler-F2/td-p/114865",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0023",
+        "VIE-0025",
+        "VIE-0031",
+        "VIE-0046"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Aus den Suchergebnissen als Ausloesen des Temperaturbegrenzers der Kesselwassertemperatur wiedergegeben; die offizielle Definition ist nicht direkt aus dem Thread belegt."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "F4",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 200-W",
+        "Vitodens 200-W (Typ WB2B)",
+        "Vitodens 300",
+        "Vitodens 100-W",
+        "Vitodens 100-W (Typ B1KC)",
+        "Vitodens 200"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.heizungsforum.de/threads/viessmann-vitodens-200-w-fehler-f4.14545/",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0026",
+        "VIE-0027",
+        "VIE-0032",
+        "VIE-0044",
+        "VIE-0045",
+        "VIE-0067"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Aus den Suchergebnissen als ausbleibendes Flammensignal nach dem Zuendversuch wiedergegeben; die offizielle Definition ist nicht unmittelbar aus dem Thread belegt."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "F9",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 300 (Typkennung WB3B laut Titel)"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-300-WB3B-geht-immer-aus-F9/td-p/366906",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0033"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Geblaesedrehzahl zu gering beziehungsweise Soll-Drehzahl nicht erreicht. Diese Zuordnung stammt aus Titel und Zusammenfassung eines Parallel-Treffers und ist nicht aus einer Originaldokumentation geprueft."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "Fd",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 333-F"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Problem-mit-Vitodens-333-F-Stoerungsmeldung-quot-Feuerungsautomat/td-p/531549",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0037"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht belegt."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "C5",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 333-F"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-333-F-Stoerung-CE-und-C5/td-p/198851",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0039"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: C5 wird in der Zusammenfassung als Kommunikationsfehler zur drehzahlgeregelten internen Pumpe beschrieben, das im selben Thread genannte CE als Kommunikationsfehler zu einer externen Erweiterung. Beides stammt aus einer maschinellen Zusammenfassung und ist nicht aus Originaldokumentation geprueft."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "E5",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 333-F"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Hallo-Wir-haben-eine-Vitodens-333-F-Im-Display-erscheint-der/td-p/103598",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0040"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: In der Zusammenfassung als Brennerblockierung wegen Stoerung des Flammenverstaerkers beschrieben. Diese Zuordnung stammt aus einer maschinellen Zusammenfassung und ist nicht aus Originaldokumentation geprueft."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "9E",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 343-F"
+      ],
+      "gefahrenkategorie": "wasser",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Meine-Vitodens-343-F-zeigt-seit-einiger-Zeit-an-sonnigen-Tagen/td-p/34979",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0042"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: In der Zusammenfassung als zu geringer oder fehlender Volumenstrom im Solarkreis beschrieben. Diese Zuordnung stammt aus einer maschinellen Zusammenfassung und ist nicht aus Originaldokumentation geprueft."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "51",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 343-F"
+      ],
+      "gefahrenkategorie": "strom",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Fehler-51-Auslauftemperatursensor-Vitodens-343-F/td-p/110148",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0043"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Laut Seitentitel dem Auslauftemperatursensor zugeordnet. Eine darueber hinausgehende Beschreibung ist aus dem Suchergebnis nicht belegt."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "0E",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 100"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Was-bedeutet-Fehlercode-Blitz-0-E-beim-Vitodens-100/td-p/145557",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0054"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Wassermangel bzw. zu geringer Wasserdruck. Angabe stammt aus der Ergebniszusammenfassung, nicht aus einer eingesehenen Originaldokumentation."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "EA",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 200",
+        "Vitodens 200-W"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-TypWB2C-Fehlercode-EA/td-p/336514",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0062",
+        "VIE-0063"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Ionisationsstrom liegt waehrend der Kalibrierung im ungueltigen Bereich (Angabe aus der maschinellen Zusammenfassung)."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "EC",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 200"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-49kW-Fehlercode-EC/td-p/439716",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0064"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Parameterfehler waehrend der Kalibrierung; die Dokumentation nennt Entriegelung beziehungsweise Austausch des Kessel-Codiersteckers (Angabe aus der maschinellen Zusammenfassung)."
+    },
+    {
+      "hersteller": "Viessmann",
+      "code": "EF",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Vitodens 300-W",
+        "Vitodens 222-W"
+      ],
+      "gefahrenkategorie": "gas",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/201855/Vitodens-300-W-WB3C-Fehler-EF-PROBLEM-GELOeST-",
+      "quelle_datum": null,
+      "fall_ids": [
+        "VIE-0065",
+        "VIE-0066"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Flammenverlust innerhalb der Sicherheitszeit (Angabe aus der maschinellen Zusammenfassung)."
+    },
+    {
+      "hersteller": "Buderus",
+      "code": "0Y 276",
+      "offizielle_bedeutung": null,
+      "betroffene_baureihen": [
+        "Logamax plus GB172"
+      ],
+      "gefahrenkategorie": "wasser",
+      "quelle_url": "https://www.haustechnikdialog.de/Forum/t/275304/Buderus-GB172-Fehlermeldung-0Y-276-Vorlaufsensor-95-Grad",
+      "quelle_datum": null,
+      "fall_ids": [
+        "BUD-0006"
+      ],
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null,
+      "unsicherheiten": "Knoten aus dem Sammellauf vom 22.08.2026. Bedeutung nicht gegen Herstellerdokumentation verifiziert. Aus der Suchzusammenfassung abgeleitet und ungesichert: Der Threadtitel selbst uebersetzt den Code mit \"Vorlaufsensor groesser 95 Grad\". Eine Bestaetigung dieser Bedeutung aus der Herstellerdokumentation lag im Suchergebnis nicht vor."
     }
   ],
   "symptomklassen": [
@@ -759,7 +1289,13 @@
       "beschreibung": "Geraet schaltet auf Stoerung ab. Oberklasse ohne Festlegung auf eine Fehlerphase; zu verwenden, solange die Schilderung keine engere Klasse hergibt.",
       "gefahrenkategorie": "gas",
       "status": "aktiv",
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0050",
+        "VAI-0063",
+        "VIE-0019",
+        "VIE-0024",
+        "VIE-0030"
+      ],
       "nachfolger": [],
       "abgrenzung_zu": [
         "kein_brennerstart",
@@ -773,7 +1309,11 @@
       "beschreibung": "Brenner zuendet nicht, das Geraet erreicht den Betrieb gar nicht erst.",
       "gefahrenkategorie": "gas",
       "status": "aktiv",
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0022",
+        "VAI-0025",
+        "VAI-0064"
+      ],
       "nachfolger": [],
       "abgrenzung_zu": [],
       "unsicherheiten": null
@@ -825,7 +1365,8 @@
       "gefahrenkategorie": "gas",
       "status": "aktiv",
       "fall_ids": [
-        "VIE-0001"
+        "VIE-0001",
+        "VAI-0026"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -911,7 +1452,10 @@
       "beschreibung": "Heizkoerper werden nicht oder nur lauwarm, ohne dass eine Stoerung angezeigt wird.",
       "gefahrenkategorie": "wasser",
       "status": "aktiv",
-      "fall_ids": [],
+      "fall_ids": [
+        "VAI-0056",
+        "BUD-0011"
+      ],
       "nachfolger": [],
       "abgrenzung_zu": [],
       "unsicherheiten": null
@@ -923,7 +1467,8 @@
       "gefahrenkategorie": "wasser",
       "status": "aktiv",
       "fall_ids": [
-        "VAI-0001"
+        "VAI-0001",
+        "BUD-0010"
       ],
       "nachfolger": [],
       "abgrenzung_zu": [],
@@ -1002,6 +1547,257 @@
       "nachfolger": [],
       "abgrenzung_zu": [],
       "unsicherheiten": null
+    },
+    {
+      "klasse": "druckverlust_im_heizkreis",
+      "achse": "leitsymptom",
+      "beschreibung": "Anlagendruck faellt wiederkehrend ab, Nachspeisung ist regelmaessig noetig.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0011",
+        "VAI-0012",
+        "VAI-0016",
+        "VAI-0045",
+        "VAI-0048",
+        "VIE-0041"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "meldung_wassermangel",
+      "achse": "leitsymptom",
+      "beschreibung": "Geraet meldet Wassermangel, ohne dass ein Fehlercode genannt wird.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0014"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "kommunikationsstoerung_regler",
+      "achse": "leitsymptom",
+      "beschreibung": "Datenaustausch zwischen Regler, Geraet oder Zusatzmodul ist gestoert.",
+      "gefahrenkategorie": "strom",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0028",
+        "BUD-0007"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "wasser_in_der_brennkammer",
+      "achse": "leitsymptom",
+      "beschreibung": "Kondensat sammelt sich in der Brennkammer, etwa bei blockiertem Siphonschwimmer.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0055"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "warmwasser_bleibt_aus",
+      "achse": "leitsymptom",
+      "beschreibung": "Warmwasserbereitung setzt nicht ein oder bricht ab, waehrend der Heizbetrieb laeuft.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0057",
+        "VAI-0070",
+        "VIE-0053",
+        "BUD-0008",
+        "BUD-0009"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "warmwasser_zu_geringer_volumenstrom",
+      "achse": "leitsymptom",
+      "beschreibung": "Warmwasserseitiger Volumenstrom ist an allen Zapfstellen vermindert.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0058",
+        "VAI-0060"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "warmwasser_temperatur_schwankt",
+      "achse": "leitsymptom",
+      "beschreibung": "Zapftemperatur schwankt, faellt waehrend der Zapfung ab oder wird erst spaet erreicht.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0059",
+        "VIE-0047",
+        "VIE-0048"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "geraeusch_beim_umschalten",
+      "achse": "leitsymptom",
+      "beschreibung": "Mechanisches Geraeusch beim Umschalten zwischen Heiz- und Warmwasserbetrieb.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0065",
+        "VIE-0036"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "geraeusch_stroemung",
+      "achse": "leitsymptom",
+      "beschreibung": "Rauschendes, brummendes oder ratterndes Stroemungsgeraeusch im Betrieb.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0066",
+        "VAI-0068"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "verpuffung_beim_abschalten",
+      "achse": "leitsymptom",
+      "beschreibung": "Knallgeraeusch im Moment der Brennerabschaltung.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0067"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "druckanstieg_ohne_nachspeisung",
+      "achse": "leitsymptom",
+      "beschreibung": "Anlagendruck steigt selbsttaetig ueber den Sollbereich, ohne dass nachgespeist wurde.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0069"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "dauerbetrieb_ohne_modulation",
+      "achse": "leitsymptom",
+      "beschreibung": "Brenner laeuft dauerhaft ohne Stoerabschaltung; Frage nach korrekter Modulation und Auslegung.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0028"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "zeitprogramm_wird_nicht_umgesetzt",
+      "achse": "leitsymptom",
+      "beschreibung": "Eingestellte Zeitprogramme werden nicht wie erwartet ausgefuehrt.",
+      "gefahrenkategorie": "strom",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0029"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "takten_kurze_brennerlaufzeit",
+      "achse": "leitsymptom",
+      "beschreibung": "Brenner schaltet in kurzen Abstaenden ein und aus, ohne einen stabilen Modulationspunkt zu erreichen.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0049",
+        "VIE-0050",
+        "VIE-0051"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "bedienung_gesperrt",
+      "achse": "leitsymptom",
+      "beschreibung": "Bedieneinheit reagiert nicht auf Eingaben oder meldet eine gesperrte Bedienung.",
+      "gefahrenkategorie": "strom",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0052"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "uebertemperatur_abschaltung",
+      "achse": "leitsymptom",
+      "beschreibung": "Sicherheitstemperaturbegrenzer oder -waechter loest wegen Uebertemperatur aus.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VIE-0058"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "stoerung_nach_wartung",
+      "achse": "leitsymptom",
+      "beschreibung": "Stoerung tritt zeitlich unmittelbar nach einer durchgefuehrten Wartung auf.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0012"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
+    },
+    {
+      "klasse": "fruehausfall",
+      "achse": "leitsymptom",
+      "beschreibung": "Stoerung wenige Wochen oder Monate nach Inbetriebnahme des Geraets.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0013"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Klasse aus dem Sammellauf vom 22.08.2026."
     }
   ]
 }
