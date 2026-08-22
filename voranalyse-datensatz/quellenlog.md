@@ -4,12 +4,43 @@ Stand: 22.08.2026. Erfasst sind die in diesem Durchlauf tatsächlich abgerufenen
 Quellen. Die Liste ist nicht vollständig im Sinne von Schritt 1 – sie
 dokumentiert, was gesichtet wurde, nicht was es gibt.
 
-## ⚠ TDM-Prüfung nach §44b UrhG: NICHT durchgeführt
+## ⚠ TDM-Prüfung nach §44b UrhG: NICHT durchgeführt — und hier auch nicht durchführbar
 
 Die robots.txt und die Nutzungsbedingungen konnten in dieser Umgebung nicht
 einzeln abgerufen werden. Damit ist für **keine** der unten genannten Quellen
 geprüft, ob ein maschinenlesbarer Nutzungsvorbehalt gegen Text- und Data-Mining
 vorliegt.
+
+### Nachtrag 22.08.2026: Ursache gemessen, nicht vermutet
+
+Im zweiten Durchlauf wurde geprüft, warum der Abruf scheitert. Ergebnis: Der
+Egress-Proxy der Ausführungsumgebung blockiert **jeden** direkten Seitenabruf,
+unabhängig von der Domain. Getestet wurden:
+
+| Ziel | Ergebnis |
+|---|---|
+| `community.viessmann.de/robots.txt` | `EGRESS_BLOCKED` |
+| `www.wolf.eu/robots.txt` | `EGRESS_BLOCKED` |
+| `www.haustechnikdialog.de` (Thread) | `EGRESS_BLOCKED` |
+| `de.wikipedia.org` (Kontrollabruf) | `EGRESS_BLOCKED` |
+
+Der Kontrollabruf auf Wikipedia zeigt, dass es sich nicht um eine Sperre
+einzelner Betreiber handelt, sondern um eine generelle Ausgangsbeschränkung.
+Verfügbar ist ausschließlich die **Websuche**, die Titel, URL und Textauszug
+liefert, aber keinen Seitenabruf.
+
+**Konsequenz:** Die TDM-Prüfung ist keine offene Aufgabe, die im nächsten
+Durchlauf nachgeholt werden kann — sie erfordert eine Umgebung mit freiem
+HTTP-Ausgang. Solange die nicht bereitsteht, kann der Bestand nicht in ein
+produktives System übernommen werden, unabhängig davon, wie viele Fälle er
+enthält. Das ist die vorrangige Voraussetzung, nicht die Fallzahl.
+
+**Zweite Konsequenz, methodisch schwerer:** Ohne Seitenabruf lässt sich eine
+Lösungsbestätigung nicht feststellen. Der Suchauszug bricht regelmäßig vor der
+Auflösung ab — im F5-Thread endete er bei der Ankündigung, die Firma zu
+informieren, während die Erfolgsmeldung vier Wochen später kam. Der
+Bestätigungsgrad `bestaetigt` ist in dieser Umgebung damit **nicht vergebbar**.
+Neu erhobene Fälle können höchstens `vermutung` erreichen.
 
 Konsequenz nach Regel 8: Der Datensatz ist als **Voruntersuchung** zu behandeln
 und nicht ohne nachgeholte Prüfung in ein produktives System zu übernehmen. Die

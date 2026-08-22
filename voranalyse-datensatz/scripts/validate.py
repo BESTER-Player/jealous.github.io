@@ -130,6 +130,15 @@ def validate_regeln(rec, path):
                             f"wenn sie aus der Herstellerdoku stammt, nie aus "
                             f"Thread-Anzahlen (Regel 4)")
 
+    # Befund 4 - benoetigte_teile nur bei nachgewiesener Behebung
+    ursache = rec.get("tatsaechliche_ursache")
+    if isinstance(ursache, str) and rec.get("benoetigte_teile"):
+        if re.search(r"nicht (abschliessend )?gekl[aä]e?rt|ungekl[aä]e?rt|"
+                     r"blieb (jedoch )?bestehen|ohne dauerhaften Erfolg", ursache, re.I):
+            warnings.append(f"{path}.benoetigte_teile ist befuellt, waehrend tatsaechliche_ursache "
+                            f"eine Nichtaufloesung ausdrueckt - aufzunehmen sind nur Teile, deren "
+                            f"Austausch die Stoerung nachweislich behoben hat")
+
     # Regel 2 - Laienzitat als Ausdruck, nicht als Textuebernahme
     sl = rec.get("symptom_laie")
     if isinstance(sl, str) and len(sl) > 200:
@@ -268,7 +277,32 @@ def validate_querverweise(wurzel, saetze):
             errors.append(f"sprachbruecke.json: _meta.eintraege_gesamt={meta['eintraege_gesamt']}, "
                           f"tatsaechlich {len(eintraege)}")
 
-        bekannte = {k.get("klasse") for k in tax.get("symptomklassen", [])}
+        klassen = tax.get("symptomklassen", [])
+        bekannte = {k.get("klasse") for k in klassen}
+        achse = {k.get("klasse"): k.get("achse") for k in klassen}
+        gefahr = {k.get("klasse"): k.get("gefahrenkategorie") for k in klassen}
+        status = {k.get("klasse"): k.get("status", "aktiv") for k in klassen}
+
+        # Abgeloeste Klassen muessen einen Nachfolger benennen und duerfen keine
+        # Faelle mehr tragen, sonst haengen Faelle an einem toten Knoten.
+        for k in klassen:
+            if k.get("status") == "abgeloest":
+                if not k.get("nachfolger"):
+                    errors.append(f"fehlercode_taxonomie.json: Klasse '{k.get('klasse')}' ist "
+                                  f"abgeloest, benennt aber keinen nachfolger")
+                for n in k.get("nachfolger", []):
+                    if n not in bekannte:
+                        errors.append(f"fehlercode_taxonomie.json: Klasse '{k.get('klasse')}' "
+                                      f"verweist auf unbekannten nachfolger '{n}'")
+                if k.get("fall_ids"):
+                    errors.append(f"fehlercode_taxonomie.json: abgeloeste Klasse "
+                                  f"'{k.get('klasse')}' traegt noch fall_ids "
+                                  f"{k.get('fall_ids')} - auf die Nachfolger umhaengen")
+            for a in k.get("abgrenzung_zu", []):
+                if a not in bekannte:
+                    errors.append(f"fehlercode_taxonomie.json: Klasse '{k.get('klasse')}' grenzt "
+                                  f"sich gegen unbekannte Klasse '{a}' ab")
+
         benutzt = set()
         for e in eintraege:
             k = e.get("symptomklasse")
@@ -276,12 +310,41 @@ def validate_querverweise(wurzel, saetze):
             if k not in bekannte:
                 errors.append(f"sprachbruecke.json: Ausdruck '{e.get('ausdruck')}' bildet auf "
                               f"Symptomklasse '{k}' ab, die in der Taxonomie nicht definiert ist")
+                continue
+            if status.get(k) == "abgeloest":
+                errors.append(f"sprachbruecke.json: '{e.get('ausdruck')}' zeigt auf die abgeloeste "
+                              f"Klasse '{k}' - auf einen Nachfolger umhaengen")
+            # ziel_art muss die Achse der Zielklasse spiegeln, sonst laeuft die
+            # Laieneingabe in ein Vokabular, das gar nicht fuer sie gedacht ist.
+            if "ziel_art" in e and e["ziel_art"] != achse.get(k):
+                errors.append(f"sprachbruecke.json: '{e.get('ausdruck')}' hat ziel_art="
+                              f"'{e['ziel_art']}', die Zielklasse '{k}' liegt aber auf der Achse "
+                              f"'{achse.get(k)}'")
+            # Gefahrenkategorie wird geerbt - eine abweichende Angabe am Eintrag
+            # koennte das Regel-6-Gatter unterlaufen.
+            if "gefahrenkategorie" in e and e["gefahrenkategorie"] != gefahr.get(k):
+                errors.append(f"sprachbruecke.json: '{e.get('ausdruck')}' traegt gefahrenkategorie="
+                              f"'{e['gefahrenkategorie']}', die Zielklasse '{k}' aber "
+                              f"'{gefahr.get(k)}' - die Kategorie wird geerbt, nicht gepflegt")
             for m in e.get("mehrdeutig_zu", []):
                 if m not in bekannte:
                     errors.append(f"sprachbruecke.json: '{e.get('ausdruck')}' verweist in "
                                   f"mehrdeutig_zu auf unbekannte Symptomklasse '{m}'")
-        for k in sorted(bekannte - benutzt):
-            warnings.append(f"Symptomklasse '{k}' hat keinen Eintrag in der Sprachbruecke - "
+            for z in e.get("zusatzziele", []):
+                benutzt.add(z)
+                if z not in bekannte:
+                    errors.append(f"sprachbruecke.json: '{e.get('ausdruck')}' verweist in "
+                                  f"zusatzziele auf unbekannte Klasse '{z}'")
+                elif achse.get(z) == "leitsymptom":
+                    warnings.append(f"sprachbruecke.json: '{e.get('ausdruck')}' fuehrt das "
+                                    f"Leitsymptom '{z}' als Zusatzziel - Leitsymptome gehoeren "
+                                    f"nach symptomklasse oder mehrdeutig_zu")
+
+        # Nur aktive Leitsymptome muessen ueber eine Laienschilderung erreichbar
+        # sein. Andere Achsen werden nicht aus der Nutzereingabe angesteuert.
+        for k in sorted(x for x in bekannte - benutzt
+                        if achse.get(x) == "leitsymptom" and status.get(x) != "abgeloest"):
+            warnings.append(f"Leitsymptom '{k}' hat keinen Eintrag in der Sprachbruecke - "
                             f"ueber eine Laienschilderung nicht erreichbar")
 
     return errors, warnings

@@ -4,7 +4,9 @@
     "status": "Teilbestand aus den in dieser Sitzung gesichteten Beitraegen",
     "zweck": "Abbildung umgangssprachlicher Symptombeschreibungen auf technische Symptomklassen. Quelle sind alle gesichteten Beitraege, auch ungeloeste.",
     "belegzahl_bedeutung": "Anzahl der Beitraege, in denen der Ausdruck gesichtet wurde. Das ist die Beleghaeufigkeit des WORTES und ausdruecklich keine Aussage ueber die Haeufigkeit der dahinterliegenden Ursache (Regel 4).",
-    "eintraege_gesamt": 17
+    "eintraege_gesamt": 17,
+    "ziel_art": "Achse der Zielklasse in fehlercode_taxonomie.json. Nur ziel_art='leitsymptom' ist Ziel einer Laieneingabe; die uebrigen Achsen dienen der Normalisierung, der Kontextauswertung oder der Fachkraftseite.",
+    "gefahrenkategorie": "Von der Zielklasse geerbt, nicht am Eintrag gepflegt. Laesst sich kein Ziel aufloesen, ist konservativ wie 'gas' zu verfahren (Regel 8)."
   },
   "eintraege": [
     {
@@ -18,7 +20,10 @@
       "sinneskanal": "verhalten",
       "belegzahl": 6,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "laeuft ohne Haube, mit Haube geht sie auf Stoerung",
@@ -29,7 +34,10 @@
       "sinneskanal": "verhalten",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": "Sehr trennscharfes Leitsymptom - der Laie beschreibt hier unbewusst bereits den Diagnoseweg."
+      "anmerkung": "Sehr trennscharfes Leitsymptom - der Laie beschreibt hier unbewusst bereits den Diagnoseweg.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "morgens Stoerung",
@@ -40,7 +48,10 @@
       "sinneskanal": "verhalten",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "springt nicht an",
@@ -52,7 +63,10 @@
       "sinneskanal": "verhalten",
       "belegzahl": 3,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Warmwasser geht, Heizung nicht",
@@ -64,7 +78,10 @@
       "sinneskanal": "verhalten",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": "Zeigt auf den Lastpunkt, nicht auf den Warmwasserkreis."
+      "anmerkung": "Mehrdeutig. Trifft die Klasse nur, wenn die stoerungsfreie Betriebsart die mit der hoeheren Leistungsanforderung ist. Die umgekehrte Richtung - Warmwasser faellt aus, Heizung laeuft - gehoert nicht hierher.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "laeuft 5 bis 10 Minuten, dann Stoerung",
@@ -78,7 +95,10 @@
         "stoerabschaltung",
         "betriebsartabhaengige_stoerung"
       ],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Heizkoerper bleiben lauwarm",
@@ -90,7 +110,10 @@
       "sinneskanal": "haptisch",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
     },
     {
       "ausdruck": "riecht nach Abgas",
@@ -101,7 +124,10 @@
       "sinneskanal": "geruch",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "tropft Kondensat aus dem Geraet",
@@ -110,27 +136,36 @@
       "sinneskanal": "optisch",
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
     },
     {
       "ausdruck": "gluckert",
       "varianten": [
         "blubbert"
       ],
-      "symptomklasse": "kondensatablauf_verstopft",
+      "symptomklasse": "geraeusch_gluckern",
       "sinneskanal": "geraeusch",
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": "Aus einer Ratgeberquelle, nicht aus einem Nutzerbeitrag - schwaecherer Beleg."
+      "anmerkung": "Aus einer Ratgeberquelle, nicht aus einem Nutzerbeitrag - schwaecherer Beleg.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "wasser",
+      "zusatzziele": []
     },
     {
       "ausdruck": "klack beim Anlaufen",
       "varianten": [],
-      "symptomklasse": "schaltgeraeusch_beim_start",
+      "symptomklasse": "geraeusch_schalten_beim_start",
       "sinneskanal": "geraeusch",
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": "Im Beleg dem Gasstroemungswaechter zugeordnet. Das Fehlen des Geraeusches war dort das Auffaellige, nicht sein Vorhandensein."
+      "anmerkung": "Im Beleg dem Gasstroemungswaechter zugeordnet. Das Fehlen des Geraeusches war dort das Auffaellige, nicht sein Vorhandensein.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Fehlermeldung mit durchgestrichenem Flammensymbol",
@@ -141,7 +176,10 @@
       "sinneskanal": "optisch",
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": "Vaillant-spezifische Displayanzeige, oft zusammen mit F.28 oder F.29 genannt."
+      "anmerkung": "Vaillant-spezifische Displayanzeige, oft zusammen mit F.28 oder F.29 genannt.",
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Reset hilft nur kurz",
@@ -153,25 +191,34 @@
       "sinneskanal": "verhalten",
       "belegzahl": 4,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "leitsymptom",
+      "gefahrenkategorie": "gas",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Dichtung war voellig im Eimer",
       "varianten": [],
       "symptomklasse": "bauteil_verschlissen",
-      "sinneskanal": "optisch",
+      "sinneskanal": null,
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": null
+      "anmerkung": null,
+      "ziel_art": "befundsprache",
+      "gefahrenkategorie": "keine",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Ventil war verklebt",
       "varianten": [],
       "symptomklasse": "absperrorgan_festsitzend",
-      "sinneskanal": "haptisch",
+      "sinneskanal": null,
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": "Betreiberwiedergabe der Aussage des Netzbetreibers."
+      "anmerkung": "Betreiberwiedergabe der Aussage des Netzbetreibers.",
+      "ziel_art": "befundsprache",
+      "gefahrenkategorie": "keine",
+      "zusatzziele": []
     },
     {
       "ausdruck": "Fass ohne Boden",
@@ -180,10 +227,15 @@
         "ich misstraue dem Geraet"
       ],
       "symptomklasse": "frustmarker_wiederholte_reparatur",
-      "sinneskanal": "verhalten",
+      "sinneskanal": null,
       "belegzahl": 2,
       "mehrdeutig_zu": [],
-      "anmerkung": "Kein technisches Symptom. Fuer die Voranalyse als Eskalationsmarker nutzbar: signalisiert Vorgeschichte mit erfolglosen Reparaturen."
+      "anmerkung": "Kein technisches Symptom. Fuer die Voranalyse als Eskalationsmarker nutzbar: signalisiert Vorgeschichte mit erfolglosen Reparaturen.",
+      "ziel_art": "kontextmarker",
+      "gefahrenkategorie": "keine",
+      "zusatzziele": [
+        "wiederkehrende_stoerung_nach_bauteiltausch"
+      ]
     },
     {
       "ausdruck": "A6 227",
@@ -193,10 +245,13 @@
         "Fehler 6a 227"
       ],
       "symptomklasse": "codeeingabe_zifferndreher",
-      "sinneskanal": "optisch",
+      "sinneskanal": null,
       "belegzahl": 1,
       "mehrdeutig_zu": [],
-      "anmerkung": "Der Betreiber gibt den Buderus-Code durchgaengig vertauscht an. Fuer die Eingabe-Normalisierung relevant: Code-Erkennung muss Zifferndreher und Schreibvarianten abfangen."
+      "anmerkung": "Der Betreiber gibt den Buderus-Code durchgaengig vertauscht an. Fuer die Eingabe-Normalisierung relevant: Code-Erkennung muss Zifferndreher und Schreibvarianten abfangen.",
+      "ziel_art": "eingabenormalisierung",
+      "gefahrenkategorie": "keine",
+      "zusatzziele": []
     }
   ]
 }

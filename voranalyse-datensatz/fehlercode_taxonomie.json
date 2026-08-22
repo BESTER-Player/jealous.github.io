@@ -5,7 +5,14 @@
     "auswahlregel": "Aufgenommen wurden Codes, die einen Fall in faelle.jsonl verankern, sowie Codes aus denselben Codegruppen. Vollstaendige Codelisten der Hersteller wurden NICHT uebernommen: einzelne Codes sind Fakten, die Liste als Ganzes kann als Datenbank nach §87a ff. UrhG geschuetzt sein. Konservative Wahl nach Regel 8.",
     "hinweis": "Bedeutungen sind eigene Formulierungen, keine Uebernahme von Tabellenzeilen. Wo 'offizielle_bedeutung' null ist, war die Bedeutung nicht belastbar zu belegen - nicht mit Plausiblem auffuellen.",
     "codes_gesamt": 52,
-    "symptomklassen_gesamt": 6
+    "symptomklassen_gesamt": 20,
+    "achsen": {
+      "leitsymptom": "Beobachtbares Symptom, Ziel der Laieneingabe.",
+      "fallmerkmal": "Merkmal des Fallverlaufs, kein Symptom.",
+      "kontextmarker": "Nicht-technischer Hinweis aus der Schilderung.",
+      "eingabenormalisierung": "Form der Nutzereingabe, kein Symptom.",
+      "befundsprache": "Formulierung fuer einen Befund nach dem Oeffnen, Fachkraftseite."
+    }
   },
   "codes": [
     {
@@ -20,7 +27,9 @@
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Abgrenzung zu F.75: F.22 meldet zu wenig Wasser, F.75 den fehlenden Druckanstieg."
+      "unsicherheiten": "Abgrenzung zu F.75: F.22 meldet zu wenig Wasser, F.75 den fehlenden Druckanstieg.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -31,7 +40,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -46,7 +57,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Mehrere Ratgeberseiten beschreiben F.28 faelschlich als Flammenausfall im Betrieb - das ist F.29."
+      "unsicherheiten": "Mehrere Ratgeberseiten beschreiben F.28 faelschlich als Flammenausfall im Betrieb - das ist F.29.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -57,7 +70,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -68,7 +83,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -79,7 +96,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -90,7 +109,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -101,7 +122,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -112,7 +135,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -123,7 +148,9 @@
       "quelle_url": "https://www.heizungsforum.de/threads/vaillant-atmotech-plus-fehler-75-72-wasserdirektanschluss-unauffindbar-bilderraetsel.15603/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -134,7 +161,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -151,7 +180,9 @@
       "fall_ids": [
         "VAI-0001"
       ],
-      "unsicherheiten": "Bewertet wird der Druckanstieg beim Pumpenstart, nicht der absolute Anlagendruck. In Ratgeberquellen wird der Code haeufig als 'Wasserdruck zu niedrig' wiedergegeben - siehe Musterabweichung M1 im Report."
+      "unsicherheiten": "Bewertet wird der Druckanstieg beim Pumpenstart, nicht der absolute Anlagendruck. In Ratgeberquellen wird der Code haeufig als 'Wasserdruck zu niedrig' wiedergegeben - siehe Musterabweichung M1 im Report.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -162,7 +193,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -173,7 +206,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Vaillant",
@@ -184,7 +219,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-vaillant-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -197,7 +234,9 @@
       "quelle_url": "https://community.viessmann.de/t5/Gas/Stoerung-Vitodens-200-W/td-p/19369",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -212,7 +251,9 @@
       "fall_ids": [
         "VIE-0005"
       ],
-      "unsicherheiten": "Im Thread ausdruecklich als weitlaeufiger Code ohne spezifische Einzelursache beschrieben - Spannweite von der Elektrode bis zur Abgasanlage."
+      "unsicherheiten": "Im Thread ausdruecklich als weitlaeufiger Code ohne spezifische Einzelursache beschrieben - Spannweite von der Elektrode bis zur Abgasanlage.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -228,7 +269,9 @@
       "fall_ids": [
         "VIE-0001"
       ],
-      "unsicherheiten": "Bedeutung nicht gegen Herstellerdokumentation verifiziert. Betreiber fuehren den Code als Feuerungsautomat-Stoerung, eine Fachbetriebsquelle beschreibt ihn als Geblaese- bzw. fehlenden Differenzdruck beim Brennerstart. Nicht befuellen, bis die Serviceanleitung der Baureihe vorliegt."
+      "unsicherheiten": "Bedeutung nicht gegen Herstellerdokumentation verifiziert. Betreiber fuehren den Code als Feuerungsautomat-Stoerung, eine Fachbetriebsquelle beschreibt ihn als Geblaese- bzw. fehlenden Differenzdruck beim Brennerstart. Nicht befuellen, bis die Serviceanleitung der Baureihe vorliegt.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -243,7 +286,9 @@
       "fall_ids": [
         "VIE-0002"
       ],
-      "unsicherheiten": "Wird im Display als Feuerungsautomat-Stoerung gefuehrt. Exakte Bedeutung nicht gegen Herstellerdokumentation verifiziert."
+      "unsicherheiten": "Wird im Display als Feuerungsautomat-Stoerung gefuehrt. Exakte Bedeutung nicht gegen Herstellerdokumentation verifiziert.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -258,7 +303,9 @@
       "fall_ids": [
         "VIE-0004"
       ],
-      "unsicherheiten": "Bedeutung nicht verifiziert."
+      "unsicherheiten": "Bedeutung nicht verifiziert.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Viessmann",
@@ -272,7 +319,9 @@
       "quelle_url": "https://community.viessmann.de/t5/Gas/Vitodens-200-W-Stoerung-Feuerungsautomat-FD-nur-bei-geschlossene/td-p/606913",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Bedeutung nicht verifiziert. In Threads regelmaessig gemeinsam mit EB und FE genannt; Viessmann-Codes sind baureihen- und reglergenerationsabhaengig."
+      "unsicherheiten": "Bedeutung nicht verifiziert. In Threads regelmaessig gemeinsam mit EB und FE genannt; Viessmann-Codes sind baureihen- und reglergenerationsabhaengig.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Buderus",
@@ -285,11 +334,10 @@
       "gefahrenkategorie": "gas",
       "quelle_url": "https://www.manualslib.de/manual/120641/Buderus-Logamax-Plus-Gb172-T.html?page=43",
       "quelle_datum": null,
-      "fall_ids": [
-        "BUD-0001",
-        "BUD-0002"
-      ],
-      "unsicherheiten": null
+      "fall_ids": [],
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Buderus",
@@ -307,7 +355,9 @@
         "BUD-0001",
         "BUD-0002"
       ],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "zusatzcode",
+      "gehoert_zu_code": "6A"
     },
     {
       "hersteller": "Buderus",
@@ -320,7 +370,9 @@
       "quelle_url": "https://www.manualslib.de/manual/120641/Buderus-Logamax-Plus-Gb172-T.html?page=43",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Buderus",
@@ -331,7 +383,9 @@
       "quelle_url": "https://www.kesselheld.de/buderus-fehlercodes-ursachen-und-hilfe/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Als Pruefpunkte werden Steckverbindungen am Geblaese, Ansteuerung und Tachokabel genannt."
+      "unsicherheiten": "Als Pruefpunkte werden Steckverbindungen am Geblaese, Ansteuerung und Tachokabel genannt.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Buderus",
@@ -342,7 +396,9 @@
       "quelle_url": "https://buderuscode.de/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Nur aus einer Ratgeberquelle, nicht gegen Herstellerdokumentation verifiziert."
+      "unsicherheiten": "Nur aus einer Ratgeberquelle, nicht gegen Herstellerdokumentation verifiziert.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -355,7 +411,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -366,7 +424,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -377,7 +437,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -388,7 +450,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -399,7 +463,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -410,7 +476,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -421,7 +489,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Pruefumfang laut Quellen: Druckdose, Luftweg, Ventilator, Steuerleitung, Abgasrohrlaenge."
+      "unsicherheiten": "Pruefumfang laut Quellen: Druckdose, Luftweg, Ventilator, Steuerleitung, Abgasrohrlaenge.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -432,7 +502,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -443,7 +515,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -454,7 +528,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -465,7 +541,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -476,7 +554,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -489,7 +569,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -500,7 +582,9 @@
       "quelle_url": "https://www.freeboilermanuals.com/junkers-bosch/fault-codes",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Junkers/Bosch",
@@ -511,7 +595,9 @@
       "quelle_url": "https://www.installateur-graf.at/stoerung-junkers-fehlercodeliste-oder-fehlermeldungen/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Als Pruefpunkt wird die Gasarmatur genannt - sicherheitsrelevant, da auf ein nicht schliessendes Ventil hindeutend."
+      "unsicherheiten": "Als Pruefpunkt wird die Gasarmatur genannt - sicherheitsrelevant, da auf ein nicht schliessendes Ventil hindeutend.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -526,7 +612,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -542,7 +630,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "In mehreren Quellen ausdruecklich als nicht-spezifischer Code beschrieben: mehrere Defekte kommen infrage."
+      "unsicherheiten": "In mehreren Quellen ausdruecklich als nicht-spezifischer Code beschrieben: mehrere Defekte kommen infrage.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -553,7 +643,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -564,7 +656,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -575,7 +669,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -586,7 +682,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -597,7 +695,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -608,7 +708,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -619,7 +721,9 @@
       "quelle_url": "https://www.wolf.eu/download-asset/15056",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": null
+      "unsicherheiten": null,
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -630,7 +734,9 @@
       "quelle_url": "https://heizungsdiagnose.de/wolf-fehlercode-tabelle/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Nur aus einer Ratgeberquelle; als haeufiger Ausloeser wird Luft im Heizsystem genannt."
+      "unsicherheiten": "Nur aus einer Ratgeberquelle; als haeufiger Ausloeser wird Luft im Heizsystem genannt.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     },
     {
       "hersteller": "Wolf",
@@ -641,62 +747,261 @@
       "quelle_url": "https://heizungsdiagnose.de/wolf-fehlercode-tabelle/",
       "quelle_datum": null,
       "fall_ids": [],
-      "unsicherheiten": "Nur aus einer Ratgeberquelle."
+      "unsicherheiten": "Nur aus einer Ratgeberquelle.",
+      "code_typ": "basiscode",
+      "gehoert_zu_code": null
     }
   ],
   "symptomklassen": [
     {
+      "klasse": "stoerabschaltung",
+      "achse": "leitsymptom",
+      "beschreibung": "Geraet schaltet auf Stoerung ab. Oberklasse ohne Festlegung auf eine Fehlerphase; zu verwenden, solange die Schilderung keine engere Klasse hergibt.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [
+        "kein_brennerstart",
+        "flammverlust_im_betrieb"
+      ],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "kein_brennerstart",
+      "achse": "leitsymptom",
+      "beschreibung": "Brenner zuendet nicht, das Geraet erreicht den Betrieb gar nicht erst.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "flammverlust_im_betrieb",
+      "achse": "leitsymptom",
+      "beschreibung": "Geraet laeuft an und faellt nach einer Betriebsphase aus.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
       "klasse": "stoerabschaltung_nur_bei_geschlossener_verkleidung",
+      "achse": "leitsymptom",
       "beschreibung": "Geraet laeuft mit abgenommener Haube stoerungsfrei und stoert bei montierter Haube. Zeigt auf Undichtigkeit mit Abgasrezirkulation, nicht auf den Feuerungsautomaten.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
       "fall_ids": [
         "VIE-0002",
         "VIE-0003"
       ],
-      "gefahrenkategorie": "gas"
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
     },
     {
       "klasse": "betriebsartabhaengige_stoerung",
-      "beschreibung": "Stoerungsfreier Warmwasserbetrieb bei hoher Last, Stoerung im Heizbetrieb nahe der unteren Modulationsgrenze.",
+      "achse": "leitsymptom",
+      "beschreibung": "Stoerungsfreier Warmwasserbetrieb bei hoher Last, Stoerung im Heizbetrieb nahe der unteren Modulationsgrenze. Richtungsmerkmal: die stoerungsfreie Betriebsart ist die mit der HOEHEREN Leistungsanforderung. Faelle mit umgekehrter Richtung gehoeren nicht hierher.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
       "fall_ids": [
-        "VIE-0005",
-        "BUD-0001"
+        "VIE-0005"
       ],
-      "gefahrenkategorie": "gas"
+      "nachfolger": [],
+      "abgrenzung_zu": [
+        "stoerabschaltung"
+      ],
+      "unsicherheiten": null
     },
     {
       "klasse": "stoerung_nach_stillstand",
+      "achse": "leitsymptom",
       "beschreibung": "Stoerung gehaeuft beim ersten Start nach laengerem Stillstand, etwa morgens oder nach Nachtabsenkung.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
       "fall_ids": [
         "VIE-0001"
       ],
-      "gefahrenkategorie": "gas"
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
     },
     {
-      "klasse": "abgasgeruch_und_kondensataustritt",
-      "beschreibung": "Geruch nach Abgas und austretendes Kondensat am Geraet, oft parallel zu Zuendstoerungen.",
+      "klasse": "stoerung_nur_temporaer_quittierbar",
+      "achse": "leitsymptom",
+      "beschreibung": "Nach Reset laeuft das Geraet nur kurz und stoert erneut.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "stoeranzeige_zuendung",
+      "achse": "leitsymptom",
+      "beschreibung": "Displayanzeige, die auf einen Zuendfehler deutet, ohne dass der Nutzer einen Code nennt.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "abgasgeruch",
+      "achse": "leitsymptom",
+      "beschreibung": "Wahrnehmbarer Abgasgeruch am oder um das Geraet.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
       "fall_ids": [
         "BUD-0002"
       ],
-      "gefahrenkategorie": "gas"
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "kondensataustritt",
+      "achse": "leitsymptom",
+      "beschreibung": "Sichtbar austretendes Kondensat am Geraet.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "BUD-0002"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "geraeusch_gluckern",
+      "achse": "leitsymptom",
+      "beschreibung": "Gluckerndes oder blubberndes Geraeusch am Geraet.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null,
+      "ursachenhypothesen": [
+        "kondensatablauf verstopft"
+      ]
+    },
+    {
+      "klasse": "geraeusch_schalten_beim_start",
+      "achse": "leitsymptom",
+      "beschreibung": "Schaltgeraeusch beim Anlaufen. Die Auspraegung ist Teil der Beobachtung: auffaellig kann sowohl das Vorhandensein als auch das FEHLEN des Geraeusches sein.",
+      "gefahrenkategorie": "gas",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null,
+      "auspraegung": null
+    },
+    {
+      "klasse": "zu_geringe_waermeabgabe",
+      "achse": "leitsymptom",
+      "beschreibung": "Heizkoerper werden nicht oder nur lauwarm, ohne dass eine Stoerung angezeigt wird.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "kein_druckanstieg_beim_pumpenstart",
+      "achse": "leitsymptom",
+      "beschreibung": "Anlagendruck im zulaessigen Bereich, aber beim Pumpenstart bleibt der erwartete Druckanstieg aus.",
+      "gefahrenkategorie": "wasser",
+      "status": "aktiv",
+      "fall_ids": [
+        "VAI-0001"
+      ],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "abgasgeruch_und_kondensataustritt",
+      "achse": "leitsymptom",
+      "beschreibung": "Kombiklasse, die beide Merkmale gleichzeitig verlangte. Abgeloest zugunsten der Einzelklassen; ein Fall mit beiden Merkmalen traegt kuenftig beide.",
+      "gefahrenkategorie": "gas",
+      "status": "abgeloest",
+      "fall_ids": [],
+      "nachfolger": [
+        "abgasgeruch",
+        "kondensataustritt"
+      ],
+      "abgrenzung_zu": [],
+      "unsicherheiten": "Am 22.08.2026 abgeloest (Befund 7). Ankerfall BUD-0002 traegt jetzt beide Nachfolgeklassen."
     },
     {
       "klasse": "wiederkehrende_stoerung_nach_bauteiltausch",
-      "beschreibung": "Mehrere Bauteile bereits ersetzt, Stoerung besteht fort. Hinweis darauf, dass die urspruengliche Diagnose der Codebedeutung gefolgt ist statt dem Leitsymptom.",
+      "achse": "fallmerkmal",
+      "beschreibung": "Mehrere Bauteile bereits ersetzt, Stoerung besteht fort. Kein Leitsymptom, sondern ein Merkmal des Fallverlaufs: Hinweis darauf, dass die bisherige Diagnose der Codebedeutung gefolgt ist statt dem Leitsymptom.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
       "fall_ids": [
         "VIE-0001",
         "VIE-0002",
         "VAI-0001",
         "BUD-0002"
       ],
-      "gefahrenkategorie": "keine"
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
     },
     {
-      "klasse": "kein_druckanstieg_beim_pumpenstart",
-      "beschreibung": "Anlagendruck im zulaessigen Bereich, aber beim Pumpenstart bleibt der erwartete Druckanstieg aus.",
-      "fall_ids": [
-        "VAI-0001"
-      ],
-      "gefahrenkategorie": "wasser"
+      "klasse": "frustmarker_wiederholte_reparatur",
+      "achse": "kontextmarker",
+      "beschreibung": "Kein technisches Symptom. Signalisiert eine Vorgeschichte erfolgloser Reparaturen. Nie Ziel einer Diagnose und ohne Wirkung auf die Priorisierung.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "codeeingabe_zifferndreher",
+      "achse": "eingabenormalisierung",
+      "beschreibung": "Kein Symptom, sondern eine Eingabeform: der Nutzer gibt einen Fehlercode vertauscht oder in abweichender Schreibweise an. Fuer die Normalisierung der Codeerkennung.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "bauteil_verschlissen",
+      "achse": "befundsprache",
+      "beschreibung": "Kein Symptom, sondern ein Befund nach dem Oeffnen des Geraets. Sprachmaterial fuer die Fachkraftseite, nicht fuer die Laieneingabe.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
+    },
+    {
+      "klasse": "absperrorgan_festsitzend",
+      "achse": "befundsprache",
+      "beschreibung": "Kein Symptom, sondern ein Befund nach Pruefung der Gasstrecke. Sprachmaterial fuer die Fachkraftseite, nicht fuer die Laieneingabe.",
+      "gefahrenkategorie": "keine",
+      "status": "aktiv",
+      "fall_ids": [],
+      "nachfolger": [],
+      "abgrenzung_zu": [],
+      "unsicherheiten": null
     }
   ]
 }
