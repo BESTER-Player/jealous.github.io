@@ -1,0 +1,16 @@
+{
+  "beschreibung": "Gewerke-Katalog für Direct Handwork. Der Schluessel 'code' wird in auftraege.json und handwerker.json referenziert.",
+  "stand": "2026-08-21",
+  "gewerke": [
+    { "code": "sanitaer",   "bezeichnung": "Sanitär",                  "kurz": "SAN", "notdienst": true,  "typischer_stundensatz_eur": 78.0 },
+    { "code": "heizung",    "bezeichnung": "Heizung / Klima",           "kurz": "HZG", "notdienst": true,  "typischer_stundensatz_eur": 82.0 },
+    { "code": "elektro",    "bezeichnung": "Elektroinstallation",       "kurz": "ELT", "notdienst": true,  "typischer_stundensatz_eur": 75.0 },
+    { "code": "maler",      "bezeichnung": "Maler und Lackierer",       "kurz": "MAL", "notdienst": false, "typischer_stundensatz_eur": 52.0 },
+    { "code": "fliesen",    "bezeichnung": "Fliesen-, Platten-, Mosaikleger", "kurz": "FLI", "notdienst": false, "typischer_stundensatz_eur": 62.0 },
+    { "code": "tischler",   "bezeichnung": "Tischler / Schreiner",      "kurz": "TIS", "notdienst": false, "typischer_stundensatz_eur": 68.0 },
+    { "code": "dachdecker", "bezeichnung": "Dachdecker",                "kurz": "DAC", "notdienst": true,  "typischer_stundensatz_eur": 71.0 },
+    { "code": "trockenbau", "bezeichnung": "Trockenbau",                "kurz": "TRB", "notdienst": false, "typischer_stundensatz_eur": 58.0 },
+    { "code": "schlosser",  "bezeichnung": "Metallbau / Schlosserei",   "kurz": "SCH", "notdienst": true,  "typischer_stundensatz_eur": 74.0 },
+    { "code": "garten",     "bezeichnung": "Garten- und Landschaftsbau","kurz": "GAL", "notdienst": false, "typischer_stundensatz_eur": 49.0 }
+  ]
+}

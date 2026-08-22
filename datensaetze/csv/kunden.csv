@@ -1,0 +1,11 @@
+kunde_id;typ;anrede;vorname;nachname;firma;strasse;plz;ort;land;telefon;email;erstkontakt_am;newsletter;notiz
+K-1001;privat;Frau;Miriam;Kowalczyk;;Lindenweg 14;30159;Hannover;DE;+49 511 2298470;m.kowalczyk@example.de;2026-01-12;0;Erreichbar nur nach 17 Uhr.
+K-1002;gewerblich;Herr;Tobias;Rehberg;Rehberg Zahntechnik GmbH;Am Kanal 7;30167;Hannover;DE;+49 511 3340192;buchhaltung@rehberg-zt.de;2025-09-03;1;Rechnung ausschließlich per E-Mail, Zahlungsziel 30 Tage.
+K-1003;privat;Herr;Ali;Demirci;;Bergstraße 88;31135;Hildesheim;DE;+49 5121 771205;ali.demirci@example.de;2026-02-28;0;
+K-1004;gewerblich;Frau;Sandra;Peters;Hausverwaltung Peters & Co. KG;Podbielskistraße 231;30655;Hannover;DE;+49 511 6604411;auftrag@hv-peters.de;2025-04-17;1;Verwaltet 42 Objekte, Sammelrechnung zum Monatsende.
+K-1005;privat;Frau;Beate;Schwarzkopf;;Zum Mühlenfeld 3;30916;Isernhagen;DE;+49 5139 880234;b.schwarzkopf@example.de;2026-03-05;0;Hund im Haus, bitte vorher klingeln.
+K-1006;privat;Herr;Jonas;Winkelmann;;Vahrenwalder Straße 112;30165;Hannover;DE;+49 511 9087762;jonas.winkelmann@example.de;2026-05-21;1;
+K-1007;gewerblich;Herr;Frank;Osterloh;Bäckerei Osterloh e.K.;Marktplatz 2;31582;Nienburg;DE;+49 5021 442018;f.osterloh@baeckerei-osterloh.de;2025-11-30;0;Arbeiten nur nach Ladenschluss ab 14 Uhr möglich.
+K-1008;privat;Frau;Lea;Brandt;;Sonnenallee 47;30539;Hannover;DE;+49 511 5512908;lea.brandt@example.de;2026-06-14;0;
+K-1009;privat;Herr;Hendrik;Vosskamp;;Alte Dorfstraße 21;31303;Burgdorf;DE;+49 5136 776510;h.vosskamp@example.de;2026-07-02;0;Altbau von 1908, kein Aufzug.
+K-1010;gewerblich;Frau;Nadine;Kruse;Kruse Logistik GmbH & Co. KG;Industriestraße 9;30853;Langenhagen;DE;+49 511 7702233;technik@kruse-logistik.de;2025-08-19;1;Zutritt nur mit Werksausweis, Anmeldung 24 h vorher.

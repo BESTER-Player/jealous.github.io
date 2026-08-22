@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Voranalyse-Fall (Handwerk / Gas-Brennwerttherme)",
+  "description": "Feldsatz exakt nach Auftragsvorgabe. additionalProperties=false verhindert das nachtraegliche Anlegen verbotener Felder (Regel 4, z. B. 'wahrscheinlichkeit').",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "fall_id", "geraeteart", "hersteller", "modellreihe", "baujahr_hinweis",
+    "symptom_laie", "symptom_technisch", "fehlercode", "code_offizielle_bedeutung",
+    "tatsaechliche_ursache", "abweichung_von_doku", "bestaetigungsgrad",
+    "diagnoseschritte", "benoetigte_teile", "fachkraft_erforderlich",
+    "gefahrenkategorie", "quelle_url", "quelle_datum", "unsicherheiten"
+  ],
+  "properties": {
+    "fall_id": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Projektweit eindeutig. Konvention: <HERSTELLER-KUERZEL>-<LFD>, z. B. VAI-0042."
+    },
+    "geraeteart": { "type": "string", "minLength": 3 },
+    "hersteller": {
+      "type": "string",
+      "enum": ["Vaillant", "Viessmann", "Buderus", "Junkers/Bosch", "Wolf"],
+      "description": "Enum stammt aus dem Konfigurationsblock des Auftrags. Erweiterung ist eine bewusste Konfigurationsaenderung, kein Nebeneffekt der Datensammlung."
+    },
+    "modellreihe": {
+      "type": "string",
+      "minLength": 2,
+      "description": "Wenn der Beitrag nur den Hersteller nennt, ist der Fall fuer die Taxonomie unbrauchbar - nicht raten (Regel 1)."
+    },
+    "baujahr_hinweis": { "type": ["string", "null"] },
+    "symptom_laie": {
+      "type": "string",
+      "minLength": 3,
+      "description": "Eigene Zusammenfassung der Laienschilderung. Charakteristische Einzelausdruecke (\"roechelt\") duerfen woertlich stehen, ganze Saetze nicht (Regel 2)."
+    },
+    "symptom_technisch": { "type": "string", "minLength": 3 },
+    "fehlercode": { "type": ["string", "null"] },
+    "code_offizielle_bedeutung": { "type": ["string", "null"] },
+    "tatsaechliche_ursache": { "type": "string", "minLength": 3 },
+    "abweichung_von_doku": { "type": ["string", "null"] },
+    "bestaetigungsgrad": {
+      "type": "string",
+      "enum": ["bestaetigt", "mehrfach_unabhaengig", "vermutung"],
+      "description": "Pflichtfeld ohne Default."
+    },
+    "diagnoseschritte": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Bei gefahrenkategorie gas|strom muss jeder Eintrag mit '[Fachkraft]' beginnen (Regel 6)."
+    },
+    "benoetigte_teile": { "type": "array", "items": { "type": "string" } },
+    "fachkraft_erforderlich": { "type": "boolean" },
+    "gefahrenkategorie": {
+      "type": "string",
+      "enum": ["gas", "strom", "wasser", "keine"]
+    },
+    "quelle_url": { "type": "string", "minLength": 8 },
+    "quelle_datum": {
+      "type": ["string", "null"],
+      "description": "ISO-Datum YYYY-MM-DD. Unbekannt = null, nicht schaetzen."
+    },
+    "unsicherheiten": { "type": ["string", "null"] }
+  }
+}

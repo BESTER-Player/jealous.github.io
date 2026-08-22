@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bester-player.github.io/schema/handwerker.schema.json",
+  "title": "Handwerksbetrieb",
+  "description": "Angeschlossener Auftragnehmer der Plattform Direct Handwork.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["handwerker_id", "betrieb", "gewerke", "strasse", "plz", "ort",
+               "stundensatz_eur", "einsatzradius_km", "notdienst", "aktiv"],
+  "properties": {
+    "handwerker_id":    { "type": "string", "pattern": "^H-[0-9]{3}$" },
+    "betrieb":          { "type": "string", "maxLength": 120 },
+    "ansprechpartner":  { "type": ["string", "null"], "maxLength": 80 },
+    "gewerke": {
+      "type": "array", "minItems": 1, "uniqueItems": true,
+      "items": { "enum": ["sanitaer", "heizung", "elektro", "maler", "fliesen",
+                          "tischler", "dachdecker", "trockenbau", "schlosser", "garten"] }
+    },
+    "strasse":          { "type": "string", "maxLength": 120 },
+    "plz":              { "type": "string", "pattern": "^[0-9]{5}$" },
+    "ort":              { "type": "string", "maxLength": 80 },
+    "telefon":          { "type": ["string", "null"] },
+    "email":            { "type": ["string", "null"], "format": "email" },
+    "ust_id":           { "type": ["string", "null"], "pattern": "^DE[0-9]{9}$" },
+    "stundensatz_eur":  { "type": "number", "exclusiveMinimum": 0, "maximum": 500 },
+    "einsatzradius_km": { "type": "integer", "minimum": 1, "maximum": 500 },
+    "mitarbeiterzahl":  { "type": ["integer", "null"], "minimum": 0 },
+    "notdienst":        { "type": "boolean" },
+    "bewertung":        { "type": ["number", "null"], "minimum": 1.0, "maximum": 5.0 },
+    "aktiv":            { "type": "boolean" },
+    "partner_seit":     { "type": ["string", "null"], "format": "date" }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://bester-player.github.io/schema/position.schema.json",
+  "title": "Auftragsposition",
+  "description": "Einzelne Leistungs-, Material- oder Anfahrtposition eines Auftrags.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["pos_nr", "leistung", "art", "menge", "einheit",
+               "einzelpreis_netto_eur", "gesamtpreis_netto_eur"],
+  "properties": {
+    "position_id":           { "type": "string", "pattern": "^A-[0-9]{4}-[0-9]{4}-[0-9]{3}$" },
+    "auftrag_id":            { "type": "string", "pattern": "^A-[0-9]{4}-[0-9]{4}$" },
+    "pos_nr":                { "type": "integer", "minimum": 1 },
+    "leistung":              { "type": "string", "minLength": 3, "maxLength": 250 },
+    "art":                   { "enum": ["lohn", "material", "anfahrt", "fremdleistung"] },
+    "menge":                 { "type": "number", "exclusiveMinimum": 0 },
+    "einheit":               { "enum": ["h", "Stk", "m", "m2", "m3", "psch", "km"] },
+    "einzelpreis_netto_eur": { "type": "number", "minimum": 0 },
+    "gesamtpreis_netto_eur": { "type": "number", "minimum": 0,
+                               "description": "menge * einzelpreis_netto_eur, auf 2 Stellen gerundet." }
+  }
+}

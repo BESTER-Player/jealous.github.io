@@ -1,0 +1,177 @@
+{
+  "beschreibung": "Stammdaten der angeschlossenen Handwerksbetriebe (Auftragnehmer). Synthetische Testdaten.",
+  "stand": "2026-08-21",
+  "anzahl": 8,
+  "handwerker": [
+    {
+      "handwerker_id": "H-201",
+      "betrieb": "Sanitär Lohmann GmbH",
+      "ansprechpartner": "Kai Lohmann",
+      "gewerke": [
+        "sanitaer",
+        "heizung"
+      ],
+      "strasse": "Fössestraße 44",
+      "plz": "30451",
+      "ort": "Hannover",
+      "telefon": "+49 511 4408810",
+      "email": "dispo@sanitaer-lohmann.de",
+      "ust_id": "DE812445901",
+      "stundensatz_eur": 79.5,
+      "einsatzradius_km": 40,
+      "mitarbeiterzahl": 11,
+      "notdienst": true,
+      "bewertung": 4.6,
+      "aktiv": true,
+      "partner_seit": "2024-03-01"
+    },
+    {
+      "handwerker_id": "H-202",
+      "betrieb": "Elektro Steinmeyer e.K.",
+      "ansprechpartner": "Petra Steinmeyer",
+      "gewerke": [
+        "elektro"
+      ],
+      "strasse": "Hildesheimer Straße 190",
+      "plz": "30519",
+      "ort": "Hannover",
+      "telefon": "+49 511 8801245",
+      "email": "info@elektro-steinmeyer.de",
+      "ust_id": "DE293007188",
+      "stundensatz_eur": 76.0,
+      "einsatzradius_km": 35,
+      "mitarbeiterzahl": 6,
+      "notdienst": true,
+      "bewertung": 4.8,
+      "aktiv": true,
+      "partner_seit": "2023-11-15"
+    },
+    {
+      "handwerker_id": "H-203",
+      "betrieb": "Malerbetrieb Ceylan",
+      "ansprechpartner": "Emre Ceylan",
+      "gewerke": [
+        "maler",
+        "trockenbau"
+      ],
+      "strasse": "Davenstedter Straße 12",
+      "plz": "30453",
+      "ort": "Hannover",
+      "telefon": "+49 511 2260099",
+      "email": "kontakt@maler-ceylan.de",
+      "ust_id": "DE334019276",
+      "stundensatz_eur": 54.0,
+      "einsatzradius_km": 50,
+      "mitarbeiterzahl": 4,
+      "notdienst": false,
+      "bewertung": 4.4,
+      "aktiv": true,
+      "partner_seit": "2024-06-10"
+    },
+    {
+      "handwerker_id": "H-204",
+      "betrieb": "Fliesen Nowak GmbH",
+      "ansprechpartner": "Grzegorz Nowak",
+      "gewerke": [
+        "fliesen"
+      ],
+      "strasse": "Im Heidkampe 5",
+      "plz": "30659",
+      "ort": "Hannover",
+      "telefon": "+49 511 6104433",
+      "email": "buero@fliesen-nowak.de",
+      "ust_id": "DE117762340",
+      "stundensatz_eur": 63.5,
+      "einsatzradius_km": 60,
+      "mitarbeiterzahl": 7,
+      "notdienst": false,
+      "bewertung": 4.2,
+      "aktiv": true,
+      "partner_seit": "2025-01-20"
+    },
+    {
+      "handwerker_id": "H-205",
+      "betrieb": "Tischlerei Ahrens & Sohn",
+      "ansprechpartner": "Malte Ahrens",
+      "gewerke": [
+        "tischler"
+      ],
+      "strasse": "Zur Sägemühle 6",
+      "plz": "31303",
+      "ort": "Burgdorf",
+      "telefon": "+49 5136 990120",
+      "email": "werkstatt@tischlerei-ahrens.de",
+      "ust_id": "DE448120553",
+      "stundensatz_eur": 69.0,
+      "einsatzradius_km": 45,
+      "mitarbeiterzahl": 5,
+      "notdienst": false,
+      "bewertung": 4.9,
+      "aktiv": true,
+      "partner_seit": "2023-05-02"
+    },
+    {
+      "handwerker_id": "H-206",
+      "betrieb": "Dach & Fassade Rethmeier",
+      "ansprechpartner": "Uwe Rethmeier",
+      "gewerke": [
+        "dachdecker"
+      ],
+      "strasse": "Feldstraße 77",
+      "plz": "31535",
+      "ort": "Neustadt am Rübenberge",
+      "telefon": "+49 5032 445566",
+      "email": "info@dach-rethmeier.de",
+      "ust_id": "DE560033891",
+      "stundensatz_eur": 72.5,
+      "einsatzradius_km": 70,
+      "mitarbeiterzahl": 9,
+      "notdienst": true,
+      "bewertung": 4.1,
+      "aktiv": true,
+      "partner_seit": "2024-09-12"
+    },
+    {
+      "handwerker_id": "H-207",
+      "betrieb": "Metallbau Grothe GmbH",
+      "ansprechpartner": "Silke Grothe",
+      "gewerke": [
+        "schlosser"
+      ],
+      "strasse": "Gewerbering 14",
+      "plz": "30853",
+      "ort": "Langenhagen",
+      "telefon": "+49 511 7331200",
+      "email": "anfrage@metallbau-grothe.de",
+      "ust_id": "DE221904667",
+      "stundensatz_eur": 77.0,
+      "einsatzradius_km": 55,
+      "mitarbeiterzahl": 13,
+      "notdienst": true,
+      "bewertung": 4.5,
+      "aktiv": true,
+      "partner_seit": "2025-02-03"
+    },
+    {
+      "handwerker_id": "H-208",
+      "betrieb": "GaLaBau Timmermann",
+      "ansprechpartner": "Jens Timmermann",
+      "gewerke": [
+        "garten"
+      ],
+      "strasse": "Am Sportplatz 1",
+      "plz": "30916",
+      "ort": "Isernhagen",
+      "telefon": "+49 5139 220188",
+      "email": "jens@galabau-timmermann.de",
+      "ust_id": "DE705118432",
+      "stundensatz_eur": 51.0,
+      "einsatzradius_km": 40,
+      "mitarbeiterzahl": 3,
+      "notdienst": false,
+      "bewertung": 3.9,
+      "aktiv": false,
+      "partner_seit": "2024-04-22"
+    }
+  ]
+}

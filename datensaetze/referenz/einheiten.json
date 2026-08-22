@@ -1,0 +1,13 @@
+{
+  "beschreibung": "Zulässige Mengeneinheiten für Auftragspositionen.",
+  "stand": "2026-08-21",
+  "einheiten": [
+    { "code": "h",    "bezeichnung": "Arbeitsstunde",   "dezimalstellen": 2 },
+    { "code": "Stk",  "bezeichnung": "Stück",          "dezimalstellen": 0 },
+    { "code": "m",    "bezeichnung": "Meter",           "dezimalstellen": 2 },
+    { "code": "m2",   "bezeichnung": "Quadratmeter",    "dezimalstellen": 2 },
+    { "code": "m3",   "bezeichnung": "Kubikmeter",      "dezimalstellen": 2 },
+    { "code": "psch", "bezeichnung": "Pauschale",       "dezimalstellen": 0 },
+    { "code": "km",   "bezeichnung": "Anfahrtkilometer","dezimalstellen": 1 }
+  ]
+}
